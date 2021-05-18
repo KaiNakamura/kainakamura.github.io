@@ -5,6 +5,7 @@ const scripts = [
 ];
 
 function loadScripts() {
+	console.log("loadScripts");
 	for (let script of scripts) {
 		// Create scrip element
 		let scriptElement = document.createElement("script");
