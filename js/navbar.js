@@ -1,0 +1,45 @@
+class NavbarItem {
+	constructor(id, text) {
+		this.id = id;
+		this.text = text;
+	}
+}
+
+const navbarItems = [
+	new NavbarItem("home", "Overview"),
+	new NavbarItem("skills", "Skills"),
+	new NavbarItem("projects", "Projects"),
+	new NavbarItem("contact", "Contact"),
+];
+
+function loadNavbar() {
+	// Get navbar
+	let navbar = document.getElementById("navbar");
+
+	// Create list
+	let ul = document.createElement("ul");
+
+	for (let navbarItem of navbarItems) {
+		// Create link
+		let a = document.createElement("a");
+
+		// Set link properties
+		a.innerHTML = navbarItem.text;
+		a.href = '#' + navbarItem.id;
+
+		// Create list item
+		let li = document.createElement("li");
+
+		// Set list item properties
+		li.classList.add(navbarItem.id);
+
+		// Append link to list item
+		li.appendChild(a);
+
+		// Append list item to list
+		ul.appendChild(li);
+	}
+
+	// Append list to navbar
+	navbar.appendChild(ul);
+}
