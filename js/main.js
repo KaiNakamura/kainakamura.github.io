@@ -1,7 +1,8 @@
 const scripts = [
 	"navbar.js",
 	"sidebar.js",
-	"icon.js"
+	"icon.js",
+	"footer.js"
 ];
 
 function loadScripts() {
@@ -22,4 +23,5 @@ window.onload = function() {
 	loadNavbar();
 	loadSidebar();
 	loadIcons();
+	loadFooter();
 };

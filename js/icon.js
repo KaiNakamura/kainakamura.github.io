@@ -1,16 +1,15 @@
 class Icon {
-	constructor(id, name, image, link) {
+	constructor(id, image, href) {
 		this.id = id;
-		this.name = name;
 		this.image = image;
-		this.link = link;
+		this.href = href;
 	}
 }
 
 const icons = [
-	new Icon("github", "GitHub", "fa fa-github fa-3x", "https://github.com/KaiNakamura"),
-	new Icon("linkedin", "LinkedIn", "fa fa-linkedin-square fa-3x", "https://www.linkedin.com/in/kaihnakamura/"),
-	new Icon("email", "Email", "fa fa-envelope fa-3x", "mailto:kaihnakamura@gmail.com"),
+	new Icon("github", "fa fa-github fa-3x", "https://github.com/KaiNakamura"),
+	new Icon("linkedin", "fa fa-linkedin-square fa-3x", "https://www.linkedin.com/in/kaihnakamura/"),
+	new Icon("email", "fa fa-envelope fa-3x", "mailto:kaihnakamura@gmail.com"),
 ];
 
 function loadIcons() {
@@ -33,7 +32,7 @@ function loadIcons() {
 
 		// Set properties
 		a.id = icon.id;
-		a.href = icon.link;
+		a.href = icon.href;
 		a.className += icon.image;
 		a.target = "_blank";
 		a.rel = "noreferrer noopener";
