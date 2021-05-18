@@ -1,19 +1,121 @@
-body {
-	background-color: black;
-	overflow: hidden;
+:root {
+	--black: #161616;
+	--dark-gray: #202024;
+	--gray: #292A2A;
+	--light-gray: #636666;
+	--white: #FEFDFC;
 }
 
-#canvas {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
+body {
+	margin: 0;
+	background-color: var(--black);
+	color: var(--white);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 2fr 5fr;
+	grid-template-areas: 
+		"header		header"
+		".			nav"
+		"sidebar	content"
+		"footer		footer";
+}
+
+
+/* @media (max-width: 1200px) {
+	.wrapper {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"header"
+			"nav"
+			"content"
+			"footer";
+	}
+	.nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+} */
+
+.header {
+	grid-area: header;
+	background-color: var(--dark-gray);
+	padding: 20px;
+}
+
+.nav {
+	grid-area: nav;
+	margin-bottom: -20px;
+	display: table;
+	border-collapse: collapse;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.nav li {
+	display: table-cell;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: var(--dark-gray);
+	border: var(--light-gray) 1px solid;
+}
+
+.nav a {
+	font-size: 24px;
+	color: var(--light-gray);
+	text-decoration: none;
+}
+
+.nav a:hover {
+	text-decoration: underline;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	margin-left: 100px;
+}
+
+#profile-picture {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	width: 80%;
+	border-radius: 50%;
+	border: var(--light-gray) 1px solid;
+}
+
+#icons {
+	display: flex;
+	justify-content: center;
 }
 
 .content {
-	color: white;
-	text-align: center;
-	font-family: 'Courier New', Courier, monospace;
+	grid-area: content;
+	background-color: var(--dark-gray);
+	margin-right: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+p {
+	font-size: 20px;
+}
+
+.footer {
+	grid-area: footer;
+	background-color: var(--dark-gray);
+	padding: 20px;
 }
