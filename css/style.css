@@ -7,6 +7,11 @@
 	--orange: #f9ab6c;
 }
 
+html {
+	/* Hide page until it loads */
+	visibility: hidden;
+}
+
 body {
 	margin: 0;
 	background-color: var(--black);
@@ -14,9 +19,9 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.wrapper {
+#wrapper {
 	display: grid;
-	gap: 20px;
+	gap: 1.5rem;
 	grid-template-columns: 1fr 2fr 5fr 1fr;
 	grid-template-areas: 
 		"header		header		header		header"
@@ -25,9 +30,8 @@ body {
 		".			footer		footer		.";
 }
 
-
 /* @media (max-width: 1200px) {
-	.wrapper {
+	#wrapper {
 		grid-template-columns: 1fr;
 		grid-template-areas: 
 			"header"
@@ -44,17 +48,17 @@ body {
 #header {
 	grid-area: header;
 	background-color: var(--dark-gray);
-	padding: 20px;
+	padding: 1.5rem;
 }
 
 /* Navbar */
 
 #navbar {
 	grid-area: navbar;
-	margin-bottom: -20px;
+	margin-bottom: -1.5rem;
 	display: table;
 	border: var(--light-gray) 1px solid;
-	border-radius: 15px 15px 0 0;
+	border-radius: 1rem 1rem 0 0;
 }
 
 #navbar ul {
@@ -64,10 +68,10 @@ body {
 
 #navbar li {
 	display: table-cell;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	text-align: center;
 	box-sizing: border-box;
 }
@@ -75,7 +79,7 @@ body {
 #navbar a {
 	display: inline-block;
 	position: relative;
-	font-size: 24px;
+	font-size: 1.5em;
 	color: var(--light-gray);
 	text-decoration: none;
 	transition: color 0.25s ease-out;
@@ -144,10 +148,10 @@ body.contact #navbar li.contact a:after {
 }
 
 .fa {
-	margin: 5px;
-	padding: 15px;
-	font-size: 0.73em;
-	width: 50px;
+	margin: 0.5rem;
+	padding: 1rem;
+	font-size: 3rem;
+	width: 3rem;
 	text-align: center;
 	text-decoration: none;
 	border-radius: 50%;
@@ -173,26 +177,26 @@ body.contact #navbar li.contact a:after {
 }
 
 /* Content */
-.content {
+#content {
 	grid-area: content;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 3rem;
+	padding-right: 3rem;
 	border: var(--light-gray) 1px solid;
-	border-radius: 0 0 15px 15px;
+	border-radius: 0 0 1rem 1rem;
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 3em;
 }
 
 p {
-	font-size: 20px;
+	font-size: 1.25em;
 }
 
 #footer {
 	grid-area: footer;
-	padding: 20px;
-	margin-top: 20px;
+	padding: 1.5em;
+	margin-top: 1.5em;
 	border-top: var(--light-gray) 1px solid;
 	text-align: center;
 }
@@ -204,17 +208,17 @@ p {
 
 #footer li {
 	display: inline;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	text-align: center;
 }
 
 #footer a {
 	display: inline-block;
 	position: relative;
-	font-size: 14px;
+	font-size: 0.85em;
 	color: var(--light-gray);
 	text-decoration: none;
 	transition: color 0.25s ease-out;

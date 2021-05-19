@@ -11,32 +11,27 @@ const footerItems = [
 ];
 
 function loadFooter() {
-	// Get footer
 	let footer = document.getElementById("footer");
-
-	// Create list
 	let ul = document.createElement("ul");
 
+	// Create footer items
 	for (let footerItem of footerItems) {
-		// Create link
 		let a = document.createElement("a");
 
 		// Set link properties
 		a.innerHTML = footerItem.text;
 		a.href = footerItem.link;
+
+		// Make link open in new tab
 		a.target = "_blank";
 		a.rel = "noreferrer noopener";
 
-		// Create list item
+		// Add links to list element and add them to the list
 		let li = document.createElement("li");
-
-		// Append link to list item
 		li.appendChild(a);
-
-		// Append list item to list
 		ul.appendChild(li);
 	}
 
-	// Append list to footer
+	// Add list to footer
 	footer.appendChild(ul);
 }

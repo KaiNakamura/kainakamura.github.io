@@ -13,27 +13,26 @@ const icons = [
 ];
 
 function loadIcons() {
-	// Get icon wrapper
 	let iconWrapper = document.getElementById("icon-wrapper");
 
-	// Create icon link
+	// Create a link to the icon images that will be used
 	let iconLink = document.createElement("link");
 	iconLink.rel = "stylesheet";
 	iconLink.href = "https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css";
 	iconLink.integrity = "sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=";
 	iconLink.crossOrigin = "anonymous";
-
-	// Append icon link to icon wrapper
 	iconWrapper.appendChild(iconLink);
 
+	// Create icons
 	for (let icon of icons) {
-		// Create link
 		let a = document.createElement("a");
 
-		// Set properties
+		// Set link properties
 		a.id = icon.id;
 		a.href = icon.href;
 		a.className += icon.image;
+
+		// Make link open in new tab
 		a.target = "_blank";
 		a.rel = "noreferrer noopener";
 
