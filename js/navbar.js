@@ -7,7 +7,6 @@ class NavbarItem {
 
 const navbarItems = [
 	new NavbarItem("home", "Overview"),
-	new NavbarItem("skills", "Skills"),
 	new NavbarItem("projects", "Projects"),
 	new NavbarItem("contact", "Contact"),
 ];
@@ -22,10 +21,13 @@ function loadNavbar() {
 	for (let navbarItem of navbarItems) {
 		// Create link
 		let a = document.createElement("a");
-
-		// Set link properties
 		a.innerHTML = navbarItem.text;
-		a.href = '#' + navbarItem.id;
+		if (navbarItem.id === "home") {
+			a.href = '/';
+		}
+		else {
+			a.href = '/' + navbarItem.id;
+		}
 
 		// Create list item
 		let li = document.createElement("li");

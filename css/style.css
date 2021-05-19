@@ -181,16 +181,13 @@ body.contact #navbar li.contact a:after {
 	grid-area: content;
 	padding-left: 3rem;
 	padding-right: 3rem;
+	font-size: 1.25em;
 	border: var(--light-gray) 1px solid;
 	border-radius: 0 0 1rem 1rem;
 }
 
 h1 {
 	font-size: 3em;
-}
-
-p {
-	font-size: 1.25em;
 }
 
 #footer {
