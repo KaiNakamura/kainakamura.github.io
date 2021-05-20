@@ -25,8 +25,7 @@ body {
 		".			Footer		Footer		.";
 }
 
-/* Content */
-.content {
+.Content {
 	grid-area: Content;
 	padding-left: 3rem;
 	padding-right: 3rem;
