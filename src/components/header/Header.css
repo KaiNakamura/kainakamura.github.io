@@ -1,0 +1,5 @@
+.Header {
+	grid-area: Header;
+	background-color: var(--dark-gray);
+	padding: 1.5rem;
+}
