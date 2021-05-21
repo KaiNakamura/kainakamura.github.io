@@ -9,7 +9,7 @@
 }
 
 /* TODO: Move profile picture into icons */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 	.profile-picture {
 		display: none;
 	}

@@ -40,17 +40,7 @@ body {
 		".		.			Navbar		."
 		".		Sidebar		Content		."
 		".		Footer		Footer		.";
-}
-
-@media only screen and (max-width: 800px) {
-	.App {
-		grid-template-columns: 1fr 5fr 1fr;
-		grid-template-areas: 
-			".		Sidebar		."
-			".		Navbar		."
-			".		Content		."
-			".		Footer		.";
-	}
+	font-size: 22px;
 }
 
 .Content {
@@ -59,9 +49,21 @@ body {
 	padding-right: 3rem;
 	border: var(--light-gray) 1px solid;
 	border-radius: 0 0 1rem 1rem;
-	font-size: 22px;
 }
 
 .Content a {
 	color: var(--blue);
+}
+
+@media only screen and (max-width: 1000px) {
+	.App {
+		gap: 1.5rem 0;
+		grid-template-columns: 1fr 7fr 1fr;
+		grid-template-areas: 
+			".		Sidebar		."
+			".		Navbar		."
+			".		Content		."
+			".		Footer		.";
+		font-size: 16px;
+	}
 }
