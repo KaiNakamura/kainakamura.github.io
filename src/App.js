@@ -1,4 +1,3 @@
-import Header from './components/header/Header';
 import Navbar from './components/navbar/Navbar';
 import Sidebar from './components/sidebar/Sidebar';
 import Footer from './components/footer/Footer';
@@ -10,7 +9,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 const App = () => (
 	<Router>
 		<div className="App">
-			<Header />
 			<Navbar />
 			<Sidebar />
 			<div className="Content">

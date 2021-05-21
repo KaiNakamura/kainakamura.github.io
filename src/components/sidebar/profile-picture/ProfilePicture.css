@@ -7,3 +7,10 @@
 	border-radius: 50%;
 	border: var(--light-gray) 1px solid;
 }
+
+/* TODO: Move profile picture into icons */
+@media only screen and (max-width: 800px) {
+	.profile-picture {
+		display: none;
+	}
+}

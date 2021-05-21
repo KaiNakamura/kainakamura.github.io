@@ -4,7 +4,12 @@
 	--gray: #292A2A;
 	--light-gray: #636666;
 	--white: #FEFDFC;
-	--orange: #f9ab6c;
+	--red: #FC846F;
+	--orange: #F9AB6C;
+	--yellow: #FCDB6F;
+	--green: #96F791;
+	--blue: #6C8BF9;
+	--purple: #F796FA;
 }
 
 body {
@@ -14,26 +19,49 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	right: 5px;
+	position:absolute;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: var(--gray);
+	border-radius: 10px;
+}
+
 .App {
 	display: grid;
+	padding-top: 2.5rem;
 	gap: 1.5rem;
 	grid-template-columns: 1fr 2fr 5fr 1fr;
 	grid-template-areas: 
-		"Header		Header		Header		Header"
-		".			.			Navbar		."
-		".			Sidebar		Content		."
-		".			Footer		Footer		.";
+		".		.			Navbar		."
+		".		Sidebar		Content		."
+		".		Footer		Footer		.";
+}
+
+@media only screen and (max-width: 800px) {
+	.App {
+		grid-template-columns: 1fr 5fr 1fr;
+		grid-template-areas: 
+			".		Sidebar		."
+			".		Navbar		."
+			".		Content		."
+			".		Footer		.";
+	}
 }
 
 .Content {
 	grid-area: Content;
 	padding-left: 3rem;
 	padding-right: 3rem;
-	font-size: 1.25em;
 	border: var(--light-gray) 1px solid;
 	border-radius: 0 0 1rem 1rem;
+	font-size: 22px;
 }
 
-h1 {
-	font-size: 3em;
+.Content a {
+	color: var(--blue);
 }
