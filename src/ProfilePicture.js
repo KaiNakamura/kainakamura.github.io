@@ -1,4 +1,4 @@
-import * as THREE from '../node_modules/three';
+import * as THREE from 'three';
 import Object3D from './Object3D.js';
 
 export default class ProfilePicture extends Object3D {
