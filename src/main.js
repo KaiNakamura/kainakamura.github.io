@@ -1,7 +1,7 @@
-import * as THREE from '../node_modules/three';
-import Object3D from './Object3D';
-import Star from './Star';
-import ProfilePicture from './ProfilePicture';
+import * as THREE from '../node_modules/three.js';
+import Object3D from './Object3D.js';
+import Star from './Star.js';
+import ProfilePicture from './ProfilePicture.js';
 
 const scene = new THREE.Scene();
 

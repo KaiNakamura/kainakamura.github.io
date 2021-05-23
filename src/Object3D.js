@@ -1,4 +1,4 @@
-import * as THREE from '../node_modules/three';
+import * as THREE from '../node_modules/three.js';
 
 export default class Object3D {
 	static objects =[];
