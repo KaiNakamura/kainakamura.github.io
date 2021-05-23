@@ -1,4 +1,3 @@
-import * as THREE from '../node_modules/three/build/three.module.js';
 import Object3D from './Object3D.js';
 
 export default class Star extends Object3D {
