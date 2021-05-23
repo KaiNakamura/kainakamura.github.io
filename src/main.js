@@ -1,5 +1,5 @@
 import '../style.css'
-import * as THREE from 'three';
+import * as THREE from '../node_modules/three';
 import Object3D from './Object3D';
 import Star from './Star';
 import ProfilePicture from './ProfilePicture';
