@@ -1,11 +1,61 @@
 import Object3D from './Object3D.js';
 import Star from './Star.js';
 import ProfilePicture from './ProfilePicture.js';
+import TorusKnot from './TorusKnot.js';
+import Pose from './Pose.js';
+import CameraPathSection from './CameraPathSection.js';
+import CameraPath from './CameraPath';
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 500);
-camera.position.set(0, 20, 0);
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+const cameraPath = new CameraPath([
+	new CameraPathSection(
+		500,
+		new THREE.Vector3(0, 20, -10),
+		new THREE.Vector3(-50, 20, -10),
+		[
+			new Pose(
+				new THREE.Vector3(0, 20, 0),
+				new THREE.Vector3(0, 0, 0)
+			),
+			new Pose(
+				new THREE.Vector3(0, 20, 200),
+				new THREE.Vector3(0, 0, 0)
+			),
+		]
+	),
+	new CameraPathSection(
+		1000,
+		new THREE.Vector3(-50, 20, -10),
+		new THREE.Vector3(-100, 20, 100),
+		[
+			new Pose(
+				new THREE.Vector3(0, 20, 200),
+				new THREE.Vector3(100, 0, 0)
+			),
+			new Pose(
+				new THREE.Vector3(200, 100, 200),
+				new THREE.Vector3(0, 0, 0)
+			),
+		]
+	),
+	new CameraPathSection(
+		1000,
+		new THREE.Vector3(-100, 20, 100),
+		new THREE.Vector3(-250, 20, 200),
+		[
+			new Pose(
+				new THREE.Vector3(200, 100, 200),
+				new THREE.Vector3(0, 0, 0)
+			),
+			new Pose(
+				new THREE.Vector3(-100, 20, 200),
+				new THREE.Vector3(0, 0, 0)
+			),
+		]
+	),
+]);
 
 const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector('#bg'),
@@ -26,6 +76,10 @@ new ProfilePicture(
 	camera
 );
 
+new TorusKnot(
+	new THREE.Vector3(12, 20, -30)
+);
+
 // Add all objects to scene
 Object3D.objects.forEach((object) => {
 	scene.add(object.object)
@@ -41,12 +95,9 @@ function updateWindowSize() {
 
 // On scroll
 function onScroll() {
-	const t = document.body.getBoundingClientRect().top;
+	const t = -document.body.getBoundingClientRect().top;
 
-	camera.position.x = t * 0.01;
-	camera.position.y = t * -0.001 + 20;
-	camera.position.z = t * -0.01;
-	camera.rotation.y = t * 0.0005;
+	cameraPath.moveCamera(camera, t);
 
 	Object3D.objects.forEach((object) => {
 		object.onScroll(t)
@@ -54,10 +105,15 @@ function onScroll() {
 }
 
 document.body.onscroll = onScroll;
+onScroll();
 
 // Animate
 function animate() {
 	requestAnimationFrame(animate);
+
+	Object3D.objects.forEach((object) => {
+		object.update()
+	});
 
 	updateWindowSize();
 	renderer.render(scene, camera);
