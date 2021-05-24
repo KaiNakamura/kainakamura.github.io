@@ -4,7 +4,7 @@ import ProfilePicture from './ProfilePicture.js';
 import TorusKnot from './TorusKnot.js';
 import Pose from './Pose.js';
 import CameraPathSection from './CameraPathSection.js';
-import CameraPath from './CameraPath';
+import CameraPath from './CameraPath.js';
 
 const scene = new THREE.Scene();
 
