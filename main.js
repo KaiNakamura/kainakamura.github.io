@@ -1,6 +1,6 @@
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector('#bg'),
@@ -27,6 +27,7 @@ const torusKnot = new THREE.Mesh(
 		wireframe: true
 	})
 );
+torusKnot.position.set(12, 20, -30);
 scene.add(torusKnot);
 
 Array(1000).fill().forEach(() => {
