@@ -21,6 +21,7 @@ This project was made using [Vite](https://github.com/vitejs/vite). To run this 
 ```
 git clone https://github.com/KaiNakamura/kainakamura.github.io.git
 cd kainakamura.github.io
+npm install vite
 npm run dev
 ```
 
