@@ -52,15 +52,26 @@ function updateWindowSize() {
 
 // On scroll
 function onScroll() {
-	const t = -document.body.getBoundingClientRect().top;
+	// Find the height of the page
+	// Different browsers use different names
+	const height = Math.max(
+		document.body.scrollHeight,
+		document.body.offsetHeight,
+		document.documentElement.clientHeight,
+		document.documentElement.scrollHeight,
+		document.documentElement.offsetHeight
+	) - window.innerHeight;
 
-	profilePicture.rotation.x = t * 0.001;
-	profilePicture.rotation.z = t * 0.001;
+	// Get scroll position from [0, 1]
+	const t = -document.body.getBoundingClientRect().top / height;
 
-	camera.position.x = t * -0.02 + 0;
-	camera.position.y = t * 0.002 + 20;
-	camera.position.z = t * 0.1 - 10;
-	camera.rotation.y = t * 0.0002;
+	profilePicture.rotation.x = 4 * t;
+	profilePicture.rotation.z = 4 * t;
+
+	camera.position.x = -80 * t + 0;
+	camera.position.y = 8 * t + 20;
+	camera.position.z = 400 * t - 10;
+	camera.rotation.y = 0.8 * t;
 }
 
 document.body.onscroll = onScroll;
