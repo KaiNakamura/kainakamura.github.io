@@ -1,5 +1,7 @@
 const scene = new THREE.Scene();
 
+const fov = 75;
+const planeAspectRatio = 16 / 9;
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
@@ -42,13 +44,26 @@ Array(1000).fill().forEach(() => {
 	scene.add(star)
 });
 
-// Update window size
-function updateWindowSize() {
+// On resize
+function onResize() {
 	renderer.setPixelRatio(window.devicePixelRatio);
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	camera.aspect = window.innerWidth / window.innerHeight;
+	
+	if (camera.aspect > planeAspectRatio) {
+		// Window too large
+		camera.fov = fov;
+	} else {
+		// Window too narrow
+		const cameraHeight = Math.tan(THREE.MathUtils.degToRad(fov / 2));
+		const ratio = camera.aspect / planeAspectRatio;
+		const newCameraHeight = cameraHeight / ratio;
+		camera.fov = THREE.MathUtils.radToDeg(Math.atan(newCameraHeight)) * 2;
+	}
 	camera.updateProjectionMatrix();
 }
+window.addEventListener('resize', onResize);
+onResize();
 
 // On scroll
 function onScroll() {
@@ -73,14 +88,12 @@ function onScroll() {
 	camera.position.z = 400 * t - 10;
 	camera.rotation.y = 0.8 * t;
 }
-
 document.body.onscroll = onScroll;
 onScroll();
 
 // Animate
 function animate() {
 	requestAnimationFrame(animate);
-	updateWindowSize();
 
 	torusKnot.rotation.x += 0.001;
 	torusKnot.rotation.y += 0.0005;
