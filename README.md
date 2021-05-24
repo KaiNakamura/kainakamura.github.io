@@ -16,12 +16,12 @@ Welcome to the repository for my personal portfolio website. I'll mostly be usin
 
 ## Installation
 
-This project was made using [React.js](https://reactjs.org). To run this app you will also need [Node.js](https://nodejs.org).
+This project was made using [Vite](https://github.com/vitejs/vite). To run this app you will also need [Node.js](https://nodejs.org).
 
 ```
 git clone https://github.com/KaiNakamura/kainakamura.github.io.git
 cd kainakamura.github.io
-npm start
+npm run dev
 ```
 
 ## Issues
