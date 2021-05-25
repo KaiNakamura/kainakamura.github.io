@@ -3,7 +3,7 @@ import Icons from './icons/Icons';
 import './Sidebar.css';
 
 const Sidebar = () => (
-	<aside className="Sidebar">
+	<aside className='Sidebar'>
 		<ProfilePicture />
 		<Icons />
 	</aside>

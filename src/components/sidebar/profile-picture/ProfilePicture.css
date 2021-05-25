@@ -8,9 +8,13 @@
 	border: var(--light-gray) 1px solid;
 }
 
-/* TODO: Move profile picture into icons */
+.profile-picture:hover {
+	opacity: 0.7;
+}
+
 @media only screen and (max-width: 1000px) {
 	.profile-picture {
-		display: none;
+		margin: 0.5rem;
+		width: 5rem;
 	}
 }

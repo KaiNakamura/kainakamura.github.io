@@ -9,15 +9,15 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => (
 	<Router>
-		<div className="App">
+		<div className='App'>
 			<Navbar />
 			<Sidebar />
-			<div className="Content">
+			<div className='Content'>
 				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route path="/projects" component={Projects} />
-					<Route path="/contact" component={Contact} />
-					<Route path="*" component={NotFoundPage} />
+					<Route exact path='/' component={Home} />
+					<Route path='/projects' component={Projects} />
+					<Route path='/contact' component={Contact} />
+					<Route path='*' component={NotFoundPage} />
 				</Switch>
 			</div>
 			<Footer />

@@ -9,11 +9,11 @@ export default class Navbar extends React.Component {
 
 	render() {
 		return (
-			<nav className="Navbar">
+			<nav className='Navbar'>
 				<ul>
-					<NavbarItem name="Overview" href="/" />
-					<NavbarItem name="Projects" href="/projects" />
-					<NavbarItem name="Contact" href="/contact" />
+					<NavbarItem name='Overview' href='/' />
+					<NavbarItem name='Projects' href='/projects' />
+					<NavbarItem name='Contact' href='/contact' />
 				</ul>
 			</nav>
 		);

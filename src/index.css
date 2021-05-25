@@ -66,4 +66,8 @@ body {
 			".		Footer		.";
 		font-size: 16px;
 	}
+	.Sidebar {
+		display: flex;
+		justify-content: center;
+	}
 }
