@@ -1,0 +1,16 @@
+.profile-picture {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+	width: 80%;
+	border-radius: 50%;
+	border: var(--light-gray) 1px solid;
+}
+
+/* TODO: Move profile picture into icons */
+@media only screen and (max-width: 1000px) {
+	.profile-picture {
+		display: none;
+	}
+}
