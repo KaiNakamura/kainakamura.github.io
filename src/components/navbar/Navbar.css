@@ -1,7 +1,6 @@
 .Navbar {
 	grid-area: Navbar;
 	margin-bottom: -1.5rem;
-	display: table;
 	border: var(--light-gray) 1px solid;
 	border-radius: 1rem 1rem 0 0;
 }
