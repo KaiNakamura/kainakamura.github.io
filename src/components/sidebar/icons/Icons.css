@@ -35,11 +35,3 @@
 	background: #EB4235;
 	color: white;
 }
-
-@media only screen and (max-width: 1000px) {
-	.fa {
-		padding: 1rem;
-		font-size: 2rem;
-		width: 2rem;
-	}
-}

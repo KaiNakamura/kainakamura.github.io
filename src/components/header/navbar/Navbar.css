@@ -1,27 +1,33 @@
 .Navbar {
-	grid-area: Navbar;
-	margin-bottom: -1.5rem;
-	border: var(--light-gray) 1px solid;
-	border-radius: 1rem 1rem 0 0;
+	margin: auto;
+	max-width: 1000px;
+	padding: 0 3rem;
+	overflow: scroll;
 }
 
 .Navbar ul {
 	margin: 0;
 	padding: 0;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: min-content;
+	justify-items: start;
+	list-style-type: none;
 }
 
 .Navbar li {
-	display: table-cell;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	/* display: inline-block; */
+	/* padding: 0 4rem; */
 	text-align: center;
 	box-sizing: border-box;
 }
 
+/* .Navbar li:first-child,
+.Navbar li:last-child {
+	padding: 0;
+} */
+
 .Navbar a {
-	display: inline-block;
 	position: relative;
 	color: var(--light-gray);
 	text-decoration: none;

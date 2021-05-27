@@ -16,6 +16,7 @@ body {
 	margin: 0;
 	background-color: var(--black);
 	color: var(--white);
+	font-size: 22px;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -31,43 +32,12 @@ body {
 	border-radius: 10px;
 }
 
-.App {
-	display: grid;
-	padding-top: 2.5rem;
-	gap: 1.5rem;
-	grid-template-columns: 1fr 2fr 5fr 1fr;
-	grid-template-areas: 
-		".		.			Navbar		."
-		".		Sidebar		Content		."
-		".		Footer		Footer		.";
-	font-size: 22px;
-}
-
 .Content {
-	grid-area: Content;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	border: var(--light-gray) 1px solid;
-	border-radius: 0 0 1rem 1rem;
+	margin: auto;
+	max-width: 1000px;
+	padding: 0 3rem;
 }
 
 .Content a {
 	color: var(--blue);
-}
-
-@media only screen and (max-width: 1000px) {
-	.App {
-		gap: 1.5rem 0;
-		grid-template-columns: 1fr 7fr 1fr;
-		grid-template-areas: 
-			".		Sidebar		."
-			".		Navbar		."
-			".		Content		."
-			".		Footer		.";
-		font-size: 16px;
-	}
-	.Sidebar {
-		display: flex;
-		justify-content: center;
-	}
 }

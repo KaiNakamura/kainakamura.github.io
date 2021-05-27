@@ -1,5 +1,4 @@
-import Navbar from './components/navbar/Navbar';
-import Sidebar from './components/sidebar/Sidebar';
+import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 import Projects from './pages/projects/Projects';
@@ -10,8 +9,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 const App = () => (
 	<Router>
 		<div className='App'>
-			<Navbar />
-			<Sidebar />
+			<Header />
 			<div className='Content'>
 				<Switch>
 					<Route exact path='/' component={Home} />
