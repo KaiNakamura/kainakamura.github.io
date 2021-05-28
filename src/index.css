@@ -1,24 +1,22 @@
 :root {
-	--black: 		hsl(216,	20%,	7%);
-	--dark-gray:	hsl(216,	10%,	15%);
-	--gray: 		hsl(216,	5%,		30%);
-	--light-gray:	hsl(216,	8%,		50%);
-	--white:		hsl(216,	40%,	95%);
-	--red:			hsl(0,		92%,	65%);
-	--orange:		hsl(30,		92%,	65%);
-	--yellow:		hsl(60,		92%,	65%);
-	--green:		hsl(120,	92%,	65%);
-	--blue:			hsl(230,	92%,	65%);
-	--purple:		hsl(260,	92%,	65%);
-	--pink:			hsl(320,	92%,	65%);
+	--black: #232526;
+	--white: #EEEEEE;
+	--gray: #2A2C2D;
+	--blue: #5294AD;
+	--red: #BA3F55;
+	--yellow: #F2E298;
 }
 
 body {
 	margin: 0;
-	background-color: var(--black);
-	color: var(--white);
-	font-size: 22px;
-	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--white);
+	color: var(--black);
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -26,19 +24,7 @@ a {
 }
 
 .Content {
-	grid-area: Content;
 	margin: auto;
-	max-width: 1000px;
+	max-width: 600px;
 	padding: 0 3rem;
 }
-
-/* @media only screen and (min-width: 800px) {
-	.App {
-		display: grid;
-		grid-template-columns: 1fr 2fr 5fr 1fr;
-		grid-template-areas: 
-			"Header		Header			Header		Header"
-			".			Sidebar			Content		."
-			".			Footer			Footer		.";
-	}
-} */

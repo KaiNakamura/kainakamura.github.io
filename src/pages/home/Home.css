@@ -1,7 +1,77 @@
-.tagline {
-	color: var(--light-gray);
-	font-weight: lighter;
-	letter-spacing: 0.2em;
-	margin-top: -1.25em;
-	margin-bottom: 1.5em;
+.Hero {
+	background-color: var(--gray);
+	height: 675px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Title {
+	margin-right: 4rem;
+}
+
+.Title h1 {
+	line-height: 0%;
+	font-size: 128px;
+	color: var(--white);
+}
+
+.Title h2 {
+	font-size: 52px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	color: var(--blue);
+}
+
+.ProfilePicture {
+	display: block;
+	margin: 0.5rem;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: var(--light-gray) 1px solid;
+}
+
+.Arrow {
+	--size: 75px;
+	width: 100%;
+	height: var(--size);
+	pointer-events: none;
+}
+
+.Arrow > div {
+	position: absolute;
+    background: var(--gray);
+}
+
+.Arrow > div:nth-child(1) {
+	width: 50%;
+	height: var(--size);
+	left: calc(-1 * var(--size));
+	background-color: var(--white);
+}
+
+.Arrow > div:nth-child(2) {
+	width: 50%;
+	height: var(--size);
+	left: calc(50% + var(--size));
+	background-color: var(--white);
+}
+
+.Arrow > div:nth-child(3) {
+	width: 0;
+	height: 0;
+	left: calc(50% - var(--size));
+
+	border-bottom: var(--size) solid var(--white);
+	border-right: var(--size) solid transparent;
+}
+
+.Arrow > div:nth-child(4) {
+	width: 0;
+	height: 0;
+	left: 50%;
+
+	border-bottom: var(--size) solid var(--white);
+	border-left: var(--size) solid transparent;
 }

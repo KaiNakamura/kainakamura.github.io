@@ -1,5 +1,4 @@
 import Header from './components/header/Header';
-import Sidebar from './components/sidebar/Sidebar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 import Projects from './pages/projects/Projects';
@@ -11,15 +10,12 @@ const App = () => (
 	<Router>
 		<div className='App'>
 			<Header />
-			<Sidebar />
-			<div className='Content'>
-				<Switch>
-					<Route exact path='/' component={Home} />
-					<Route path='/projects' component={Projects} />
-					<Route path='/contact' component={Contact} />
-					<Route path='*' component={NotFoundPage} />
-				</Switch>
-			</div>
+			<Switch>
+				<Route exact path='/' component={Home} />
+				<Route path='/projects' component={Projects} />
+				<Route path='/contact' component={Contact} />
+				<Route path='*' component={NotFoundPage} />
+			</Switch>
 			<Footer />
 		</div>
 	</Router>

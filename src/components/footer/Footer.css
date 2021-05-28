@@ -1,5 +1,4 @@
 .Footer {
-	grid-area: Footer;
 	padding: 1.5em;
 	border-top: var(--light-gray) 1px solid;
 	text-align: center;

@@ -1,43 +1,39 @@
 .Navbar {
-	margin: auto;
-	max-width: 1000px;
-	padding: 0 3rem;
+	background-color: var(--black);
+	height: 100px;
 }
 
 .Navbar ul {
 	margin: 0;
 	padding: 0;
+	height: 100%;
+	font-size: 32px;
 	list-style-type: none;
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .Navbar li {
 	display: flex;
 	text-align: center;
 	box-sizing: border-box;
+	padding-bottom: 8px;
 }
 
 .Navbar a {
 	padding: 0.5rem 2rem;
 	white-space: nowrap;
 	text-decoration: none;
-	color: var(--light-gray);
-	border: 0;
-	border-bottom: transparent 2px solid;
-
-	transition:
-		color 0.25s ease-out,
-		border-color 0.25s ease-out;
+	color: var(--white);
 }
 
 .Navbar a:hover {
-	color: var(--white);
-	border-bottom-color: var(--white);
+	text-decoration: underline;
 }
 
 .Navbar a.active {
-	color: var(--white);
-	border-bottom-color: var(--orange);
 	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
+	color: var(--red);
 }

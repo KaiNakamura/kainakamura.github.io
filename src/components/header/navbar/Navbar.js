@@ -11,8 +11,9 @@ export default class Navbar extends React.Component {
 		return (
 			<nav className='Navbar'>
 				<ul>
-					<NavbarItem name='Overview' href='/' />
+					<NavbarItem name='Kai Nakamura' href='/' />
 					<NavbarItem name='Projects' href='/projects' />
+					<NavbarItem name='Skills' href='/skills' />
 					<NavbarItem name='Contact' href='/contact' />
 				</ul>
 			</nav>

@@ -1,5 +1,4 @@
 .Sidebar {
-	grid-area: Sidebar;
 	display: flex;
 	justify-content: center;
 }
