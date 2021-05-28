@@ -1,15 +1,16 @@
 :root {
-	--black: #161616;
-	--dark-gray: #202024;
-	--gray: #292A2A;
-	--light-gray: #636666;
-	--white: #FEFDFC;
-	--red: #FC846F;
-	--orange: #F9AB6C;
-	--yellow: #FCDB6F;
-	--green: #96F791;
-	--blue: #6C8BF9;
-	--purple: #F796FA;
+	--black: 		hsl(216,	20%,	7%);
+	--dark-gray:	hsl(216,	10%,	15%);
+	--gray: 		hsl(216,	5%,		30%);
+	--light-gray:	hsl(216,	8%,		50%);
+	--white:		hsl(216,	40%,	95%);
+	--red:			hsl(0,		92%,	65%);
+	--orange:		hsl(30,		92%,	65%);
+	--yellow:		hsl(60,		92%,	65%);
+	--green:		hsl(120,	92%,	65%);
+	--blue:			hsl(230,	92%,	65%);
+	--purple:		hsl(260,	92%,	65%);
+	--pink:			hsl(320,	92%,	65%);
 }
 
 body {
@@ -20,12 +21,24 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+	color: var(--blue);
+}
+
 .Content {
+	grid-area: Content;
 	margin: auto;
 	max-width: 1000px;
 	padding: 0 3rem;
 }
 
-.Content a {
-	color: var(--blue);
-}
+/* @media only screen and (min-width: 800px) {
+	.App {
+		display: grid;
+		grid-template-columns: 1fr 2fr 5fr 1fr;
+		grid-template-areas: 
+			"Header		Header			Header		Header"
+			".			Sidebar			Content		."
+			".			Footer			Footer		.";
+	}
+} */
