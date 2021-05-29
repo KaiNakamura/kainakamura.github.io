@@ -10,11 +10,12 @@
 
 .Project img {
 	max-width: 300px;
+	max-height: 300px;
 	align-self: center;
 }
 
 .ProjectText {
-	display: block;
+	display: inline-block;
 	margin-right: 3rem;
 }
 
@@ -23,10 +24,30 @@
 	margin-bottom: 1rem;
 }
 
+.ProjectText h2 {
+	font-size: 22px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding-left: 5px;
+}
+
 .ProjectText p {
 	line-height: 150%;
 }
 
 .ProjectText p + p {
 	margin-top: 2rem;
+}
+
+.javascript {
+	color: var(--yellow);
+}
+
+.reactjs {
+	color: var(--blue);
+}
+
+.java {
+	color: var(--orange);
 }

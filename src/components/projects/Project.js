@@ -6,7 +6,8 @@ export default class Project extends React.Component {
 		return (
 			<div className='Project'>
 				<div className='ProjectText'>
-					<h1>{this.props.name}</h1>
+					<h2 className={this.props.language}>{this.props.language}</h2>
+					<h1>{this.props.title}</h1>
 					{this.props.children}
 				</div>
 				{this.props.img}
