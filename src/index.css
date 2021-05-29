@@ -16,7 +16,6 @@
 body {
 	position: relative;
 	height: 100vh;
-	margin: 0;
 	background-color: var(--white);
 	color: var(--black);
 	font-size: 24px;
