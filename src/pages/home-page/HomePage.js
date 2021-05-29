@@ -1,8 +1,9 @@
+import Projects from '../../components/projects/Projects';
 import pfp from '../../images/kai-nakamura.png';
-import './Home.css';
+import './HomePage.css';
 
-const Home = () => (
-	<div className='Home'>
+const HomePage = () => (
+	<div className='HomePage'>
 		<section className='Hero'>
 			<div className='Title'>
 				<h1>Hi, I'm Kai</h1>
@@ -20,7 +21,8 @@ const Home = () => (
 			<p>Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Nam euismod dignissim magna, nec ultricies sem tempus nec.</p>
 			<p>Donec at nisl ut quam <i>ultrices pretium feugiat</i> convallis lectus. Integer condimentum velit id orci scelerisque, at condimentum massa sodales.</p>
 		</section>
+		<Projects />
 	</div>
 )
 
-export default Home;
+export default HomePage;

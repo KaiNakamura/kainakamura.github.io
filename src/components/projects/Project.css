@@ -1,0 +1,32 @@
+.Project {
+	margin: 3rem auto;
+	padding: 2.5rem;
+	width: clamp(800px, 60%, 1200px);
+	background-color: var(--gray);
+	color: var(--white);
+	border-radius: 50px;
+	display: flex;
+}
+
+.Project img {
+	max-width: 300px;
+	align-self: center;
+}
+
+.ProjectText {
+	display: block;
+	margin-right: 3rem;
+}
+
+.ProjectText h1 {
+	font-size: 40px;
+	margin-bottom: 1rem;
+}
+
+.ProjectText p {
+	line-height: 150%;
+}
+
+.ProjectText p + p {
+	margin-top: 2rem;
+}

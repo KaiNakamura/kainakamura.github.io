@@ -1,9 +1,9 @@
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import Home from './pages/home/Home';
-import Projects from './pages/projects/Projects';
-import Skills from './pages/skills/Skills';
-import Contact from './pages/contact/Contact';
+import HomePage from './pages/home-page/HomePage';
+import ProjectsPage from './pages/projects-page/ProjectsPage';
+import SkillsPage from './pages/skills-page/SkillsPage';
+import ContactPage from './pages/contact-page/ContactPage';
 import NotFoundPage from './pages/not-found-page/NotFoundPage';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -12,10 +12,10 @@ const App = () => (
 		<div className='App'>
 			<Header />
 			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route path='/projects' component={Projects} />
-				<Route path='/skills' component={Skills} />
-				<Route path='/contact' component={Contact} />
+				<Route exact path='/' component={HomePage} />
+				<Route path='/projects' component={ProjectsPage} />
+				<Route path='/skills' component={SkillsPage} />
+				<Route path='/contact' component={ContactPage} />
 				<Route path='*' component={NotFoundPage} />
 			</Switch>
 			<Footer />

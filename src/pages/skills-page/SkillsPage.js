@@ -1,7 +1,7 @@
-import './Skills.css';
+import './SkillsPage.css';
 
-const Skills = () => (
-	<div className='Skills'>
+const SkillsPage = () => (
+	<div className='SkillsPage'>
 		<section className='Content'>
 			<h1>Skills</h1>
 			<p>Lorem ipsum dolor sit amet</p>
@@ -9,4 +9,4 @@ const Skills = () => (
 	</div>
 )
 
-export default Skills;
+export default SkillsPage;

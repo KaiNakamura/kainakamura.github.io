@@ -33,12 +33,13 @@ a {
 .App {
 	min-height: 100vh;
 	position: relative;
+	padding-bottom: 100px;
 }
 
 .Content {
 	margin: auto;
 	max-width: 750px;
-	padding: 3rem 3rem calc(3rem + 100px) 3rem;
+	padding: 3rem;
 }
 
 .Content p + p {
