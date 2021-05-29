@@ -1,6 +1,7 @@
 .Hero {
 	background-color: var(--gray);
 	height: 65vh;
+	padding: 3rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
