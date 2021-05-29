@@ -1,6 +1,6 @@
 .Hero {
 	background-color: var(--gray);
-	height: 675px;
+	height: 65vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -8,10 +8,10 @@
 
 .Title {
 	margin-right: 4rem;
+	margin-bottom: 2rem;
 }
 
 .Title h1 {
-	line-height: 0%;
 	font-size: 128px;
 	color: var(--white);
 }
@@ -37,6 +37,7 @@
 	width: 100%;
 	height: var(--size);
 	pointer-events: none;
+	margin-bottom: -25px;
 }
 
 .Arrow > div {
@@ -52,7 +53,7 @@
 }
 
 .Arrow > div:nth-child(2) {
-	width: 50%;
+	width: calc(50% - var(--size));
 	height: var(--size);
 	left: calc(50% + var(--size));
 	background-color: var(--white);

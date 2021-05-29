@@ -7,7 +7,15 @@
 	--yellow: #F2E298;
 }
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
+	position: relative;
+	height: 100vh;
 	margin: 0;
 	background-color: var(--white);
 	color: var(--black);
@@ -23,8 +31,17 @@ a {
 	color: var(--blue);
 }
 
+.App {
+	min-height: 100vh;
+	position: relative;
+}
+
 .Content {
 	margin: auto;
-	max-width: 600px;
-	padding: 0 3rem;
+	max-width: 750px;
+	padding: 3rem 3rem calc(3rem + 100px) 3rem;
+}
+
+.Content p + p {
+	margin-top: 2rem;
 }
