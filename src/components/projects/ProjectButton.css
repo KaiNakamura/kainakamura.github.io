@@ -1,0 +1,34 @@
+.ProjectButton {
+	height: 50px;
+	margin-top: 2rem;
+	display: inline-block;
+}
+
+.ProjectButton a {
+	display: inline-block;
+	border-radius: 25px;
+	background-color: var(--green);
+
+	height: 100%;
+	vertical-align: middle;
+	padding: 0 2rem;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.1375em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Add spacer for vertical alignment */
+.ProjectButton a:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.ProjectButton a span {
+	display: inline-block;
+	vertical-align: middle;
+}
