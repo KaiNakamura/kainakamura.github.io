@@ -1,7 +1,15 @@
 .ProjectButton {
 	height: 50px;
-	margin-top: 2rem;
 	display: inline-block;
+	margin-right: 1rem;
+}
+
+.ProjectButton + .ProjectButton {
+	margin-top: 1rem;
+}
+
+p + .ProjectButton {
+	margin-top: 2rem;
 }
 
 .ProjectButton a {
