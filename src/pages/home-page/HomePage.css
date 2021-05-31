@@ -1,6 +1,6 @@
 .Hero {
 	background-color: var(--gray);
-	height: 65vh;
+	height: clamp(300px, 65vw, 65vh);
 	padding: 3rem;
 	display: flex;
 	justify-content: center;
@@ -13,12 +13,12 @@
 }
 
 .Title h1 {
-	font-size: 128px;
+	font-size: 8rem;
 	color: var(--white);
 }
 
 .Title h2 {
-	font-size: 52px;
+	font-size: 3.25rem;
 	font-family: var(--font-primary);
 	font-weight: normal;
 	color: var(--blue);
@@ -31,6 +31,31 @@
 	height: 300px;
 	border-radius: 50%;
 	border: var(--light-gray) 1px solid;
+}
+
+@media only screen and (max-width: 1100px) {
+	.Hero {
+		padding: 1rem;
+	}
+
+	.Title {
+		margin-right: 4vw;
+		margin-bottom: 2vw;
+	}
+
+	.Title h1 {
+		font-size: max(24px, 12vw);
+	}
+
+	.Title h2 {
+		font-size: max(9.75px, 4.875vw);
+	}
+
+	.ProfilePicture {
+		margin: 0.25vw;
+		width: 18.75vw;
+		height: 18.75vw;
+	}
 }
 
 .Arrow {

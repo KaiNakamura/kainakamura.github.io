@@ -1,30 +1,29 @@
 .Project {
-	margin: 3rem auto;
+	margin: 3rem;
 	padding: 2.5rem;
-	width: clamp(800px, 60%, 1200px);
+	width: min(60%, 1200px);
 	background-color: var(--gray);
 	color: var(--white);
+	word-wrap: break-word;
 	border-radius: 50px;
-	display: flex;
+	display: grid;
+	grid-template-areas: 
+		'ProjectHeading		ProjectImage'
+		'ProjectDescription	ProjectImage';
 }
 
-.Project img {
-	max-width: 300px;
-	max-height: 300px;
-	align-self: center;
+/* If project comes after another project, don't add top margin */
+.Project + .Project {
+	margin-top: 0;
 }
 
-.ProjectText {
-	display: inline-block;
-	margin-right: 3rem;
-}
 
-.ProjectText h1 {
+.Project h1 {
 	font-size: 40px;
 	margin-bottom: 1rem;
 }
 
-.ProjectText h2 {
+.Project h2 {
 	font-size: 22px;
 	font-family: var(--font-primary);
 	font-weight: normal;
@@ -32,12 +31,40 @@
 	padding-left: 5px;
 }
 
-.ProjectText p {
+.Project p {
 	line-height: 150%;
 }
 
-.ProjectText p + p {
+.Project p + p {
 	margin-top: 2rem;
+}
+
+.Project img {
+	grid-area: ProjectImage;
+	align-self: center;
+	max-width: 300px;
+	max-height: 300px;
+	margin-left: 2rem;
+	float: right;
+}
+
+.ProjectHeading {
+	grid-area: ProjectHeading;
+}
+
+.ProjectDescription {
+	grid-area: ProjectDescription;
+}
+
+@media only screen and (max-width: 1200px) {
+	.Project {
+		display: block;
+	}
+
+	.Project img {
+		max-width: 50%;
+		max-height: 50%;
+	}
 }
 
 .javascript {
