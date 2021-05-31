@@ -1,27 +1,28 @@
 .ProjectButton {
-	height: 50px;
+	height: 3em;
 	display: inline-block;
-	margin-right: 1rem;
+	margin-right: 1em;
+	font-size: 1rem;
 }
 
 .ProjectButton + .ProjectButton {
-	margin-top: 1rem;
+	margin-top: 1em;
 }
 
 p + .ProjectButton {
-	margin-top: 2rem;
+	margin-top: 2em;
 }
 
 .ProjectButton a {
 	display: inline-block;
-	border-radius: 25px;
+	border-radius: 1.5em;
 	background-color: var(--green);
 
 	height: 100%;
 	vertical-align: middle;
-	padding: 0 2rem;
+	padding: 0 2em;
 	color: white;
-	font-size: 14px;
+	font-size: 0.875em;
 	font-weight: bold;
 	letter-spacing: 0.1375em;
 	text-decoration: none;
@@ -39,4 +40,10 @@ p + .ProjectButton {
 .ProjectButton a span {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+@media only screen and (max-width: 700px) {
+	.ProjectButton {
+		font-size: 0.75rem;
+	}
 }

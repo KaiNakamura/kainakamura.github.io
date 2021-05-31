@@ -3,3 +3,8 @@
 	flex-direction: column;
 	align-items: center;
 }
+
+/* If projects comes after content, don't add top margin to first project */
+.Content + .Projects .Project:first-child {
+	margin-top: 0;
+}
