@@ -7,6 +7,9 @@
 	--yellow: #F2E298;
 	--green: #3ACF38;
 	--blue: #5294AD;
+
+	--font-primary: 'Open Sans', sans-serif;
+	--font-accent: 'Ubuntu', sans-serif;
 }
 
 * {
@@ -21,11 +24,11 @@ body {
 	background-color: var(--white);
 	color: var(--black);
 	font-size: 24px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: var(--font-primary);
 }
 
 h1, h2, h3 {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: var(--font-accent);
 }
 
 a {

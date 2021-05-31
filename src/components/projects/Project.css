@@ -26,7 +26,7 @@
 
 .ProjectText h2 {
 	font-size: 22px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: var(--font-primary);
 	font-weight: normal;
 	text-transform: uppercase;
 	padding-left: 5px;

@@ -16,6 +16,7 @@ const HomePage = () => (
 			<div></div>
 			<div></div>
 			<div></div>
+			<div></div>
 		</div>
 		<section className='Content'>
 			<p>Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Nam euismod dignissim magna, nec ultricies sem tempus nec.</p>

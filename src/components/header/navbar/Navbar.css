@@ -32,6 +32,6 @@
 
 .Navbar a.active {
 	font-weight: bold;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: var(--font-accent);
 	color: var(--red);
 }
