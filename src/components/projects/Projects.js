@@ -22,8 +22,8 @@ export default class Projects extends React.Component {
 					title='kainakamura.github.io'
 					language='reactjs'
 				>
-					<p>Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Nam euismod dignissim magna, nec ultricies sem tempus nec.</p>
-					<p>Donec at nisl ut quam <i>ultrices pretium feugiat</i> convallis lectus. Integer condimentum velit id orci scelerisque, at condimentum massa sodales.</p>
+					<p>You're looking at it right now! This is where I show off all the cool stuff I've been working on recently.</p>
+					<p>This website went through a lot of different changes but currently it's running on ReactJS. Check out the GitHub repo to view the full history of my website.</p>
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/kainakamura.github.io' />
 				</Project>
 				<Project
