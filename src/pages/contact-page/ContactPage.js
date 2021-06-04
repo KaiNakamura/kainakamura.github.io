@@ -4,7 +4,7 @@ const ContactPage = () => (
 	<div className='ContactPage'>
 		<section className='Content'>
 			<h1>Contact</h1>
-			<p>Lorem ipsum dolor sit amet</p>
+			<a target="_blank" rel="noreferrer noopener" href="mailto:kaihnakamura@gmail.com">kaihnakamura@gmail.com</a>
 		</section>
 	</div>
 )

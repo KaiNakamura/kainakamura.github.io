@@ -35,6 +35,7 @@ export default class Projects extends React.Component {
 					<p>It was used in the <a href='https://smash.gg/mcss' target='_blank' rel='noreferrer noopener'>Minecraft Speedrun Showdown</a> tournament in which 32 streamers competed for a $1000 prize.</p>
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/SpeedrunShowdown' />
 				</Project>
+				{/* TODO: Add robotics */}
 			</div>
 		);
 	}
