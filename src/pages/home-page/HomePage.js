@@ -21,7 +21,6 @@ const HomePage = () => (
 		<section className='Content'>
 			<p>Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Nam euismod dignissim magna, nec ultricies sem tempus nec.</p>
 			<p>Donec at nisl ut quam <i>ultrices pretium feugiat</i> convallis lectus. Integer condimentum velit id orci scelerisque, at condimentum massa sodales.</p>
-			<p>Test Node.js CI/CD</p>
 		</section>
 		<Projects />
 	</div>
