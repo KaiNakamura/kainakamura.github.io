@@ -14,8 +14,8 @@ export default class Projects extends React.Component {
 					language='javascript'
 					img={<img src={chess} alt='Kai Nakamura' />}
 				>
-					<p>Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Nam euismod dignissim magna, nec ultricies sem tempus nec.</p>
-					<p>Donec at nisl ut quam <i>ultrices pretium feugiat</i> convallis lectus. Integer condimentum velit id orci scelerisque, at condimentum massa sodales.</p>
+					<p>This project is a work in progress. I plan to make an AI that can play chess using a <a href='https://en.wikipedia.org/wiki/Minimax' target='_blank' rel='noreferrer noopener'>minimax</a> algorithm.</p>
+					<p>Right now I have code for basic piece movement and capturing. Check out the current status of the project on GitHub.</p>
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/ChessEngine' />
 				</Project>
 				<Project
