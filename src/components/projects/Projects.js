@@ -1,8 +1,8 @@
 import React from 'react';
 import Project from './Project';
 import ProjectButton from './ProjectButton';
-import chess from'../../images/chess.png';
-import speedrun_showdown from'../../images/speedrun-showdown.png';
+import chess from 'images/chess.png';
+import speedrun_showdown from 'images/speedrun-showdown.png';
 import './Projects.css';
 
 export default class Projects extends React.Component {

@@ -1,5 +1,5 @@
-import Projects from '../../components/projects/Projects';
-import pfp from '../../images/kai-nakamura.png';
+import Projects from 'components/projects/Projects';
+import pfp from 'images/kai-nakamura.png';
 import './HomePage.css';
 
 const HomePage = () => (
