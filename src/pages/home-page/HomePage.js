@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Projects from 'components/projects/Projects';
 import pfp from 'images/kai-nakamura.png';
 import './HomePage.css';
@@ -19,8 +20,9 @@ const HomePage = () => (
 			<div></div>
 		</div>
 		<section className='Content'>
-			<p>Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit. Nam euismod dignissim magna, nec ultricies sem tempus nec.</p>
-			<p>Donec at nisl ut quam <i>ultrices pretium feugiat</i> convallis lectus. Integer condimentum velit id orci scelerisque, at condimentum massa sodales.</p>
+			<p>I like programming robots, websites, games, and whatever else comes to mind. Right now I'm pursuing my Bachelor's in Computer Science at <a href='https://wpi.edu' target='_blank' rel='noreferrer noopener'>WPI</a>.</p>
+			<p>Check out some of the cool stuff I've been working on below. If you've got any questions or are interested in working with me feel free to <Link to='contact'>shoot me an email</Link>.</p>
+
 		</section>
 		<Projects />
 	</div>

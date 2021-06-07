@@ -23,7 +23,7 @@ export default class Projects extends React.Component {
 					language='reactjs'
 				>
 					<p>You're looking at it right now! This is where I show off all the cool stuff I've been working on recently.</p>
-					<p>This website went through a lot of different changes but currently it's running on ReactJS. Check out the GitHub repo to view the full history of my website.</p>
+					<p>This website went through a lot of different changes but currently it's running on <a href='https://reactjs.org' target='_blank' rel='noreferrer noopener'>ReactJs</a>. Check out the GitHub repo to view the full history of my website.</p>
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/kainakamura.github.io' />
 				</Project>
 				<Project
