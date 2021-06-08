@@ -18,6 +18,15 @@ export default class Projects extends React.Component {
 					<p>Right now I have code for basic piece movement and capturing. Check out the current status of the project on GitHub.</p>
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/ChessEngine' />
 				</Project>
+				{/* TODO: Add images and text */}
+				<Project
+					title='Skunk Works Robotics'
+					language='java'
+				>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis tincidunt venenatis. Sed non felis vel mauris volutpat rutrum. Nunc dictum scelerisque arcu, ut ornare ante sollicitudin a.</p>
+					<p>Fusce libero orci, vestibulum in pellentesque nec, pretium eget turpis. Cras blandit purus et est bibendum, quis blandit augue pretium. Vestibulum molestie felis sed tortor lacinia, at sagittis orci hendrerit.</p>
+					<ProjectButton name='View on GitHub' href='https://github.com/Skunkworks1983' />
+				</Project>
 				<Project
 					title='kainakamura.github.io'
 					language='reactjs'
@@ -35,7 +44,6 @@ export default class Projects extends React.Component {
 					<p>It was used in the <a href='https://smash.gg/mcss' target='_blank' rel='noreferrer noopener'>Minecraft Speedrun Showdown</a> tournament in which 32 streamers competed for a $1000 prize.</p>
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/SpeedrunShowdown' />
 				</Project>
-				{/* TODO: Add robotics */}
 			</div>
 		);
 	}
