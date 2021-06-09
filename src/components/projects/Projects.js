@@ -25,7 +25,7 @@ export default class Projects extends React.Component {
 				>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis tincidunt venenatis. Sed non felis vel mauris volutpat rutrum. Nunc dictum scelerisque arcu, ut ornare ante sollicitudin a.</p>
 					<p>Fusce libero orci, vestibulum in pellentesque nec, pretium eget turpis. Cras blandit purus et est bibendum, quis blandit augue pretium. Vestibulum molestie felis sed tortor lacinia, at sagittis orci hendrerit.</p>
-					<ProjectButton name='View on GitHub' href='https://github.com/Skunkworks1983' />
+					<ProjectButton name='View More' href='https://skunkworks1983.com' />
 				</Project>
 				<Project
 					title='kainakamura.github.io'
