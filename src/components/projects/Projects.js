@@ -19,14 +19,14 @@ export default class Projects extends React.Component {
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/ChessEngine' />
 				</Project>
 				{/* TODO: Add images and text */}
-				<Project
+				{/* <Project
 					title='Skunk Works Robotics'
 					language='java'
 				>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis tincidunt venenatis. Sed non felis vel mauris volutpat rutrum. Nunc dictum scelerisque arcu, ut ornare ante sollicitudin a.</p>
 					<p>Fusce libero orci, vestibulum in pellentesque nec, pretium eget turpis. Cras blandit purus et est bibendum, quis blandit augue pretium. Vestibulum molestie felis sed tortor lacinia, at sagittis orci hendrerit.</p>
 					<ProjectButton name='View More' href='https://skunkworks1983.com' />
-				</Project>
+				</Project> */}
 				<Project
 					title='kainakamura.github.io'
 					language='reactjs'
