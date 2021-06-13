@@ -8,7 +8,7 @@ const COHESION_STRENGTH = 1.0;
 const SEPARATION_STRENGTH = 1.5;
 const MAX_ACCELERATION = 0.05;
 const MAX_SPEED = 2;
-const BOID_SIZE = 20;
+const BOID_SIZE = 1; // % of screen width
 
 export default class Boid {
 	constructor(sketch) {
@@ -20,21 +20,26 @@ export default class Boid {
 		this.velocity = p5.Vector.random2D();
 		this.velocity.setMag(sketch.random(2, 4));
 		this.acceleration = sketch.createVector();
+		this.resize();
+	}
+
+	resize() {
+		this.size = (BOID_SIZE / 100.0) * this.sketch.width;
 	}
 
 	edges() {
-		if (this.position.x > this.sketch.width + BOID_SIZE) {
-			this.position.x = -BOID_SIZE;
+		if (this.position.x > this.sketch.width + this.size) {
+			this.position.x = -this.size;
 		}
-		else if (this.position.x < -BOID_SIZE) {
-			this.position.x = this.sketch.width + BOID_SIZE
+		else if (this.position.x < -this.size) {
+			this.position.x = this.sketch.width + this.size
 		}
 
-		if (this.position.y > this.sketch.height + BOID_SIZE) {
-			this.position.y = -BOID_SIZE;
+		if (this.position.y > this.sketch.height + this.size) {
+			this.position.y = -this.size;
 		}
-		else if (this.position.y < -BOID_SIZE) {
-			this.position.y = this.sketch.height + BOID_SIZE;
+		else if (this.position.y < -this.size) {
+			this.position.y = this.sketch.height + this.size;
 		}
 	}
 
@@ -85,7 +90,9 @@ export default class Boid {
 			let distance = this.position.dist(other.position);
 			if (other !== this && distance < SEPARATION_RADIUS) {
 				let difference = p5.Vector.sub(this.position, other.position);
-				difference.mult(1 / distance);
+				if (distance > 0) {
+					difference.mult(1 / distance);
+				}
 				steering.add(difference);
 				total++;
 			}
@@ -120,6 +127,7 @@ export default class Boid {
 		this.velocity.add(this.acceleration);
 		this.velocity.limit(MAX_SPEED);
 		this.acceleration.set(0, 0);
+		this.resize();
 		this.edges();
 	}
 
@@ -133,9 +141,9 @@ export default class Boid {
 		this.sketch.rotate(direction.heading());
 		this.sketch.translate(direction.mag(), 0);
 		this.sketch.triangle(
-			0, BOID_SIZE / 3,
-			0, -BOID_SIZE / 3,
-			BOID_SIZE, 0
+			0, this.size / 3,
+			0, -this.size / 3,
+			this.size, 0
 		);
 		this.sketch.pop();
 	}
