@@ -1,4 +1,5 @@
 import React from 'react';
+import Boids from './boids/Boids';
 import pfp from 'images/kai-nakamura.png';
 import './Hero.css';
 
@@ -6,7 +7,7 @@ export default class Hero extends React.Component {
 	render() {
 		return (
 			<section className='Hero'>
-				<canvas className='HeroBackground'></canvas>
+				<Boids />
 				<div className='HeroContent'>
 					<div className='Title'>
 						<h1>Hi, I'm Kai</h1>
