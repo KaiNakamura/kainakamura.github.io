@@ -4,8 +4,8 @@ const PERCEPTION_RADIUS = 50;
 const ALIGNMENT_STRENGTH = 1.5; 
 const COHESION_STRENGTH = 1.0;
 const SEPARATION_STRENGTH = 1.5;
-const MAX_ACCELERATION = 0.05;
-const MAX_SPEED = 2;
+const MAX_ACCELERATION = 0.4;
+const MAX_SPEED = 3;
 const BOID_SIZE = 1; // % of screen width
 
 export default class Boid {
@@ -41,24 +41,38 @@ export default class Boid {
 		}
 	}
 
-	flock(boids) {
+	flock(boids, mouse) {
 		let alignment = this.sketch.createVector();
 		let cohesion = this.sketch.createVector();
 		let separation = this.sketch.createVector();
 		let total = 0;
 		boids.forEach(other => {
 			let distance = this.position.dist(other.position);
-			if (other !== this && distance < PERCEPTION_RADIUS) {
+			if (other !== this && distance < PERCEPTION_RADIUS && distance > 0) {
 				alignment.add(other.velocity);
 				cohesion.add(other.position);
-				let difference = p5.Vector.sub(this.position, other.position);
-				if (distance > 0) {
-					difference.mult(1 / distance);
-				}
+				let difference = p5.Vector.sub(
+					this.position,
+					other.position
+				);
+				difference.mult(1 / distance);
 				separation.add(difference);
 				total++;
 			}
 		});
+		let mousePosition = this.sketch.createVector(
+			this.sketch.mouseX,
+			this.sketch.mouseY
+		);
+		let mouseDistance = this.position.dist(mousePosition);
+		if (mouseDistance < mouse.radius && mouseDistance > 0) {
+			let difference = p5.Vector.sub(
+				this.position,
+				mousePosition
+			);
+			difference.mult(mouse.separationStrength / mouseDistance);
+			separation.add(difference);
+		}
 		if (total > 0) {
 			alignment.setMag(MAX_SPEED)
 			alignment.sub(this.velocity);

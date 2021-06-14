@@ -1,4 +1,5 @@
 import React from 'react';
+import Mouse from './Mouse';
 import Boid from './Boid';
 import p5 from 'p5';
 import './Boids.css';
@@ -12,6 +13,7 @@ export default class Boids extends React.Component {
 	Sketch = (sketch) => {
 		let parentDiv = document.getElementById('Boids');
 		let backgroundColor = getComputedStyle(document.body).getPropertyValue('--gray');
+		let mouse;
 		let boids = Array(200);
 
 		sketch.setup = () => {
@@ -19,12 +21,14 @@ export default class Boids extends React.Component {
 				parentDiv.offsetWidth,
 				parentDiv.offsetHeight
 			);
+			mouse = new Mouse(sketch);
 			boids = boids.fill().map(() => new Boid(sketch));
 		};
 
 		sketch.draw = () => {
 			sketch.background(backgroundColor);
-			boids.forEach(boid => boid.flock(boids));
+			mouse.draw();
+			boids.forEach(boid => boid.flock(boids, mouse));
 			boids.forEach(boid => boid.update());
 			boids.forEach(boid => boid.draw());
 		};
