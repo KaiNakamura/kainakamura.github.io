@@ -1,8 +1,6 @@
 import p5 from 'p5';
 
-const ALIGNMENT_RADIUS = 50;
-const COHESION_RADIUS = 10;
-const SEPARATION_RADIUS = 50;
+const PERCEPTION_RADIUS = 50;
 const ALIGNMENT_STRENGTH = 1.5; 
 const COHESION_STRENGTH = 1.0;
 const SEPARATION_STRENGTH = 1.5;
@@ -43,82 +41,47 @@ export default class Boid {
 		}
 	}
 
-	align(boids) {
+	flock(boids) {
+		let alignment = this.sketch.createVector();
+		let cohesion = this.sketch.createVector();
+		let separation = this.sketch.createVector();
 		let total = 0;
-		let steering = this.sketch.createVector();
 		boids.forEach(other => {
 			let distance = this.position.dist(other.position);
-			if (other !== this && distance < ALIGNMENT_RADIUS
-			) {
-				steering.add(other.velocity);
-				total++;
-			}
-		});
-		if (total > 0) {
-			steering.setMag(MAX_SPEED)
-			steering.sub(this.velocity);
-			steering.limit(MAX_ACCELERATION);
-		}
-		return steering;
-	}
-
-	cohere(boids) {
-		let total = 0;
-		let steering = this.sketch.createVector();
-		boids.forEach(other => {
-			let distance = this.position.dist(other.position);
-			if (other !== this && distance < COHESION_RADIUS
-			) {
-				steering.add(other.position);
-				total++;
-			}
-		});
-		if (total > 0) {
-			steering.div(total);
-			steering.sub(this.position);
-			steering.setMag(MAX_SPEED)
-			steering.sub(this.velocity);
-			steering.limit(MAX_ACCELERATION);
-		}
-		return steering;
-	}
-
-	separate(boids) {
-		let total = 0;
-		let steering = this.sketch.createVector();
-		boids.forEach(other => {
-			let distance = this.position.dist(other.position);
-			if (other !== this && distance < SEPARATION_RADIUS) {
+			if (other !== this && distance < PERCEPTION_RADIUS) {
+				alignment.add(other.velocity);
+				cohesion.add(other.position);
 				let difference = p5.Vector.sub(this.position, other.position);
 				if (distance > 0) {
 					difference.mult(1 / distance);
 				}
-				steering.add(difference);
+				separation.add(difference);
 				total++;
 			}
 		});
 		if (total > 0) {
-			steering.div(total);
-			steering.setMag(MAX_SPEED)
-			steering.sub(this.velocity);
-			steering.limit(MAX_ACCELERATION);
+			alignment.setMag(MAX_SPEED)
+			alignment.sub(this.velocity);
+			alignment.limit(MAX_ACCELERATION);
+			alignment.mult(ALIGNMENT_STRENGTH);
+
+			cohesion.div(total);
+			cohesion.sub(this.position);
+			cohesion.setMag(MAX_SPEED)
+			cohesion.sub(this.velocity);
+			cohesion.limit(MAX_ACCELERATION);
+			cohesion.mult(COHESION_STRENGTH);
+
+			separation.div(total);
+			separation.setMag(MAX_SPEED)
+			separation.sub(this.velocity);
+			separation.limit(MAX_ACCELERATION);
+			separation.mult(SEPARATION_STRENGTH);
 		}
-		return steering;
-	}
-
-	flock(boids) {
-		let alignment = this.align(boids);
-		let cohesion = this.cohere(boids);
-		let separation = this.separate(boids);
-
-		alignment.mult(ALIGNMENT_STRENGTH);
-		cohesion.mult(COHESION_STRENGTH);
-		separation.mult(SEPARATION_STRENGTH);
 
 		this.acceleration.add(alignment);
 		this.acceleration.add(cohesion);
 		this.acceleration.add(separation);
-
 	}
 
 	update() {
@@ -127,7 +90,6 @@ export default class Boid {
 		this.velocity.add(this.acceleration);
 		this.velocity.limit(MAX_SPEED);
 		this.acceleration.set(0, 0);
-		this.resize();
 		this.edges();
 	}
 

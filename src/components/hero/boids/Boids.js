@@ -34,6 +34,7 @@ export default class Boids extends React.Component {
 				parentDiv.offsetWidth,
 				parentDiv.offsetHeight
 			);
+			boids.forEach(boid => boid.resize());
 		};
 	};
 
