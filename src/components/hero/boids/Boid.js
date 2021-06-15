@@ -1,9 +1,9 @@
 import p5 from 'p5';
 
-const PERCEPTION_RADIUS = 50;
-const ALIGNMENT_STRENGTH = 1.5; 
-const COHESION_STRENGTH = 1.0;
-const SEPARATION_STRENGTH = 1.5;
+const PERCEPTION_RADIUS = 75;
+const ALIGNMENT_STRENGTH = 1.2; 
+const COHESION_STRENGTH = 0.8;
+const SEPARATION_STRENGTH = 1.0;
 const MAX_ACCELERATION = 0.4;
 const MAX_SPEED = 3;
 const BOID_SIZE = 1; // % of screen width
