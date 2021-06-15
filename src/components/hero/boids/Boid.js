@@ -45,22 +45,7 @@ export default class Boid {
 		let alignment = this.sketch.createVector();
 		let cohesion = this.sketch.createVector();
 		let separation = this.sketch.createVector();
-		let attraction = this.sketch.createVector();
 		let total = 0;
-		boids.forEach(other => {
-			let distance = this.position.dist(other.position);
-			if (other !== this && distance < PERCEPTION_RADIUS && distance > 0) {
-				alignment.add(other.velocity);
-				cohesion.add(other.position);
-				let difference = p5.Vector.sub(
-					this.position,
-					other.position
-				);
-				difference.mult(1 / distance);
-				separation.add(difference);
-				total++;
-			}
-		});
 		let mousePosition = this.sketch.createVector(
 			this.sketch.mouseX,
 			this.sketch.mouseY
@@ -68,18 +53,33 @@ export default class Boid {
 		let mouseDistance = this.position.dist(mousePosition);
 		if (mouseDistance < mouse.radius && mouseDistance > 0) {
 			if (this.sketch.mouseIsPressed) {
-				attraction.add(mousePosition);
-				attraction.sub(this.position);
-				attraction.mult(mouse.attractionStrength);
+				cohesion.add(mousePosition);
+				cohesion.sub(this.position);
 			}
 			else {
 				let difference = p5.Vector.sub(
 					this.position,
 					mousePosition
 				);
-				difference.mult(mouse.separationStrength / mouseDistance);
+				difference.mult(1 / mouseDistance);
 				separation.add(difference);
 			}
+		}
+		else {
+			boids.forEach(other => {
+				let distance = this.position.dist(other.position);
+				if (other !== this && distance < PERCEPTION_RADIUS && distance > 0) {
+					alignment.add(other.velocity);
+					cohesion.add(other.position);
+					let difference = p5.Vector.sub(
+						this.position,
+						other.position
+					);
+					difference.mult(1 / distance);
+					separation.add(difference);
+					total++;
+				}
+			});
 		}
 		if (total > 0) {
 			alignment.setMag(MAX_SPEED)
@@ -104,7 +104,6 @@ export default class Boid {
 		this.acceleration.add(alignment);
 		this.acceleration.add(cohesion);
 		this.acceleration.add(separation);
-		this.acceleration.add(attraction);
 	}
 
 	update() {
