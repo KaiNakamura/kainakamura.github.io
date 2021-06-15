@@ -45,6 +45,7 @@ export default class Boid {
 		let alignment = this.sketch.createVector();
 		let cohesion = this.sketch.createVector();
 		let separation = this.sketch.createVector();
+		let attraction = this.sketch.createVector();
 		let total = 0;
 		boids.forEach(other => {
 			let distance = this.position.dist(other.position);
@@ -66,12 +67,19 @@ export default class Boid {
 		);
 		let mouseDistance = this.position.dist(mousePosition);
 		if (mouseDistance < mouse.radius && mouseDistance > 0) {
-			let difference = p5.Vector.sub(
-				this.position,
-				mousePosition
-			);
-			difference.mult(mouse.separationStrength / mouseDistance);
-			separation.add(difference);
+			if (this.sketch.mouseIsPressed) {
+				attraction.add(mousePosition);
+				attraction.sub(this.position);
+				attraction.mult(mouse.attractionStrength);
+			}
+			else {
+				let difference = p5.Vector.sub(
+					this.position,
+					mousePosition
+				);
+				difference.mult(mouse.separationStrength / mouseDistance);
+				separation.add(difference);
+			}
 		}
 		if (total > 0) {
 			alignment.setMag(MAX_SPEED)
@@ -96,6 +104,7 @@ export default class Boid {
 		this.acceleration.add(alignment);
 		this.acceleration.add(cohesion);
 		this.acceleration.add(separation);
+		this.acceleration.add(attraction);
 	}
 
 	update() {

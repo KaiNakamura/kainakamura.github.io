@@ -2,8 +2,8 @@ export default class Mouse {
 	constructor(sketch) {
 		this.sketch = sketch;
 		this.radius = 100;
-		this.cohesionStrength = 100;
 		this.separationStrength = 100;
+		this.attractionStrength = 100;
 	}
 
 	draw() {
