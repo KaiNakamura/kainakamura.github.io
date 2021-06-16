@@ -8,14 +8,14 @@ export default class Hero extends React.Component {
 		return (
 			<section className='Hero'>
 				<Boids />
-				<div className='HeroContent unselectable'>
+				<div className='HeroContent'>
 					<div className='Title'>
 						<h1>Hi, I'm Kai</h1>
 						<h2>Software Dev / Student</h2>
 					</div>
 					<img className='ProfilePicture' src={pfp} alt='Kai Nakamura' />
 				</div>
-				<div className='Arrow unselectable'>
+				<div className='Arrow'>
 					<div></div>
 					<div></div>
 					<div></div>
