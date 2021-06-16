@@ -4,6 +4,8 @@ import Boid from './Boid';
 import p5 from 'p5';
 import './Boids.css';
 
+const BOID_COUNT = 150;
+
 export default class Boids extends React.Component {
 	constructor(props) {
 		super(props);
@@ -14,7 +16,7 @@ export default class Boids extends React.Component {
 		let parentDiv = document.getElementById('Boids');
 		let backgroundColor = getComputedStyle(document.body).getPropertyValue('--gray');
 		let mouse;
-		let boids = Array(200);
+		let boids = Array(BOID_COUNT);
 
 		sketch.setup = () => {
 			sketch.createCanvas(
