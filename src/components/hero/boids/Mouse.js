@@ -5,6 +5,10 @@ export default class Mouse {
 		this.sketch = sketch;
 		this.radius = 100;
 		this.animationFrame = 0;
+
+		// Start mouse off canvas
+		this.sketch.mouseX = -this.radius;
+		this.sketch.mouseY = -this.radius;
 	}
 
 	draw() {
