@@ -3,6 +3,7 @@ import Project from './Project';
 import ProjectButton from './ProjectButton';
 import chess from 'images/chess.png';
 import speedrun_showdown from 'images/speedrun-showdown.png';
+import workday_schedule_exporter from 'images/workday-schedule-exporter.png';
 import './Projects.css';
 
 export default class Projects extends React.Component {
@@ -43,6 +44,15 @@ export default class Projects extends React.Component {
 					<p>This project is a Minecraft speedrunning and PvP plugin. Teams of players race to be the first to beat the game.</p>
 					<p>It was used in the <a href='https://smash.gg/mcss' target='_blank' rel='noreferrer noopener'>Minecraft Speedrun Showdown</a> tournament in which 32 streamers competed for a $1000 prize.</p>
 					<ProjectButton name='View on GitHub' href='https://github.com/KaiNakamura/SpeedrunShowdown' />
+				</Project>
+				<Project
+					title='Workday Schedule Exporter'
+					language='reactjs'
+					img={<img src={workday_schedule_exporter} alt='Workday Schedule Exporter' />}
+				>
+					<p>This was the first project I ever made while at WPI. I made it with my roommate, <a href='https://github.com/Akalay27' target='_blank' rel='noreferrer noopener'>Adam</a>, so that students at WPI would have an easy way to export their Workday schedules to their favorite calendar app.</p>
+					<ProjectButton name='View Website' href='https://akalay27.github.io/workday-schedule-exporter/' />
+					<ProjectButton name='View on GitHub' href='https://github.com/Akalay27/workday-schedule-exporter' />
 				</Project>
 			</div>
 		);
