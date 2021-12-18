@@ -14,5 +14,8 @@
 - [ ] Add java projects from CS 2103
 - [ ] Finish chess engine
 
+### Links
+- [ ] Add social links to GitHub, LinkedIn, etc.
+
 ### Completed
 - [x] Make TODO
