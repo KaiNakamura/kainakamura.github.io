@@ -3,6 +3,7 @@
 ### Boids
 - [ ] Optimize boids with quad tree
 - [ ] Fix jittery rotation
+- [ ] Make boids same size and speed on all screen sizes
 
 ### Music
 - [ ] Add music page
@@ -16,6 +17,10 @@
 
 ### Links
 - [ ] Add social links to GitHub, LinkedIn, etc.
+
+### Contact
+- [ ] Make contact page look better
+- [ ] Add more contact methods?
 
 ### Completed
 - [x] Make TODO
