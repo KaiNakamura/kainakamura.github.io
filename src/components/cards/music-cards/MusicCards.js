@@ -1,6 +1,5 @@
 import React from 'react';
 import MusicCard from './MusicCard';
-import CardButton from 'components/cards/CardButton';
 import CardAudio from 'components/cards/CardAudio';
 import final_composition from 'audio/final_composition.mp3';
 import 'components/cards/Cards.css';
