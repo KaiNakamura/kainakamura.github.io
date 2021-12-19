@@ -1,19 +1,13 @@
-.ProjectButton {
+.CardButton {
 	height: 3em;
 	display: inline-block;
+	vertical-align: top;
 	margin-right: 1em;
 	font-size: 1rem;
-}
-
-.ProjectButton + .ProjectButton {
 	margin-top: 1em;
 }
 
-p + .ProjectButton {
-	margin-top: 2em;
-}
-
-.ProjectButton a {
+.CardButton a {
 	display: inline-block;
 	border-radius: 1.5em;
 	background-color: var(--green);
@@ -30,20 +24,20 @@ p + .ProjectButton {
 }
 
 /* Add spacer for vertical alignment */
-.ProjectButton a:before {
+.CardButton a:before {
 	content: '';
 	display: inline-block;
 	vertical-align: middle;
 	height: 100%;
 }
 
-.ProjectButton a span {
+.CardButton a span {
 	display: inline-block;
 	vertical-align: middle;
 }
 
 @media only screen and (max-width: 700px) {
-	.ProjectButton {
+	.CardButton {
 		font-size: 0.75rem;
 	}
 }

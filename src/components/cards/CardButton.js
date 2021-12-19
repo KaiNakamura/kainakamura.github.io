@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ProjectButton.css';
+import './CardButton.css';
 
-export default class ProjectButton extends React.Component {
+export default class CardButton extends React.Component {
 	render() {
 		return (
-			<div className='ProjectButton'>
+			<div className='CardButton'>
 				{
 					// If link is on this site, route to page
 					// If link is external, open in new tab

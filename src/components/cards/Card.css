@@ -1,4 +1,4 @@
-.Project {
+.Card {
 	margin: 3em 0;
 	padding: 2.5em;
 	width: min(60%, 1200px);
@@ -8,21 +8,21 @@
 	border-radius: 50px;
 	display: grid;
 	grid-template-areas: 
-		'ProjectHeading		ProjectImage'
-		'ProjectDescription	ProjectImage';
+		'CardHeading		CardImage'
+		'CardDescription	CardImage';
 }
 
-/* If project comes after another project, don't add top margin */
-.Project + .Project {
+/* If card comes after another card, don't add top margin */
+.Card + .Card {
 	margin-top: 0;
 }
 
-.Project h1 {
+.Card h1 {
 	font-size: 2.5em;
 	margin-bottom: 0.5em;
 }
 
-.Project h2 {
+.Card h2 {
 	font-size: 1.375em;
 	font-family: var(--font-primary);
 	font-weight: normal;
@@ -30,17 +30,17 @@
 	padding-left: 5px;
 }
 
-.Project p {
+.Card p {
 	font-size: 1.5em;
 	line-height: 150%;
 }
 
-.Project p + p {
+.Card p + p {
 	margin-top: 1.25em;
 }
 
-.Project img {
-	grid-area: ProjectImage;
+.Card img {
+	grid-area: CardImage;
 	align-self: center;
 	max-width: 300px;
 	max-height: 300px;
@@ -49,40 +49,28 @@
 	float: right;
 }
 
-.ProjectHeading {
-	grid-area: ProjectHeading;
+.CardHeading {
+	grid-area: CardHeading;
 }
 
-.ProjectDescription {
-	grid-area: ProjectDescription;
+.CardDescription {
+	grid-area: CardDescription;
 }
 
 @media only screen and (max-width: 1200px) {
-	.Project {
+	.Card {
 		display: block;
 		width: 90%;
 	}
 }
 
 @media only screen and (max-width: 700px) {
-	.Project img {
+	.Card img {
 		max-width: min(150px, 50%);
 		max-height: min(150px, 50%);
 	}
 
-	.Project {
+	.Card {
 		font-size: 0.75rem;
 	}
-}
-
-.javascript {
-	color: var(--yellow);
-}
-
-.reactjs {
-	color: var(--blue);
-}
-
-.java {
-	color: var(--orange);
 }

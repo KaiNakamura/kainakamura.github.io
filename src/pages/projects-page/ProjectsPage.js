@@ -1,9 +1,9 @@
-import Projects from 'components/projects/Projects';
+import ProjectCards from 'components/cards/project-cards/ProjectCards';
 import './ProjectsPage.css';
 
 const ProjectsPage = () => (
 	<div className='ProjectsPage'>
-		<Projects />
+		<ProjectCards />
 	</div>
 )
 
