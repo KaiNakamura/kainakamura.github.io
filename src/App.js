@@ -2,7 +2,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import HomePage from './pages/home-page/HomePage';
 import ProjectsPage from './pages/projects-page/ProjectsPage';
-import SkillsPage from './pages/skills-page/SkillsPage';
+import MusicPage from './pages/music-page/MusicPage';
 import ContactPage from './pages/contact-page/ContactPage';
 import NotFoundPage from './pages/not-found-page/NotFoundPage';
 import ScrollToTop from './util/ScrollToTop';
@@ -16,7 +16,7 @@ const App = () => (
 			<Switch>
 				<Route exact path='/' component={HomePage} />
 				<Route path='/projects' component={ProjectsPage} />
-				<Route path='/skills' component={SkillsPage} />
+				<Route path='/music' component={MusicPage} />
 				<Route path='/contact' component={ContactPage} />
 				<Route path='*' component={NotFoundPage} />
 			</Switch>
