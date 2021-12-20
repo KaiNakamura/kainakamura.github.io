@@ -3,11 +3,25 @@ import './Card.css';
 
 export default class Card extends React.Component {
 	render() {
+		const renderTitle = () => {
+			if (this.props.title != null) {
+				return <h1>{this.props.title}</h1>;
+			}
+			return null;
+		}
+
+		const renderSubtitle = () => {
+			if (this.props.title != null) {
+				return <h2>{this.props.subtitle}</h2>;
+			}
+			return null;
+		}
+
 		return (
 			<div className='Card'>
 				<div className='CardHeading'>
-					<h1>{this.props.title}</h1>
-					<h2>{this.props.subtitle}</h2>
+					{renderTitle()}
+					{renderSubtitle()}
 					{this.props.heading}
 				</div>
 				{this.props.img}
