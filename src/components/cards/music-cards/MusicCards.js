@@ -32,7 +32,7 @@ export default class ProjectCards extends React.Component {
 					<CardAudio audio={saccharine_squares} />
 				</Card>
 				<Card title='Reverse Entropy'>
-					<p>My stab at creating an EDM beat with a 909 drum kit and some different synths I made.</p>
+					<p>My stab at creating an EDM beat with some different synths I made.</p>
 					<CardAudio audio={reverse_entropy} />
 				</Card>
 			</div>
