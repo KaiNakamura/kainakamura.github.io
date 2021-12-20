@@ -21,6 +21,8 @@
 - [ ] Add racket projects from CS 1102
 - [ ] Add java projects from CS 2103
 - [ ] Finish chess engine
+- [ ] Add itch.io games
+- [ ] Add robotics stuff?
 
 ### Links
 - [ ] Add social links to GitHub, LinkedIn, etc.
