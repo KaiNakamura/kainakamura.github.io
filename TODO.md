@@ -10,6 +10,7 @@
 - [ ] Make a way to mark cards as featured and only show those on homepage
 - [ ] Add a "view all" button to featured cards to show the rest
 - [ ] Add markdown functionality for cards
+- [ ] Find a better way to import images and audio
 
 ### Music
 - [x] Add music page

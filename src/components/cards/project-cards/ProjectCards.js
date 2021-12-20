@@ -41,7 +41,7 @@ export default class ProjectCards extends React.Component {
 					language='reactjs'
 					img={<img src={workday_schedule_exporter} alt='Workday Schedule Exporter' />}
 				>
-					<p>This was the first project I ever made while at WPI. I made it with my roommate, <a href='https://github.com/Akalay27' target='_blank' rel='noreferrer noopener'>Adam</a>, so that students at WPI would have an easy way to export their Workday schedules to their favorite calendar app.</p>
+					<p>This was the first project I ever made while at WPI. I made it with my roommate, <a href='https://github.com/Akalay27' target='_blank' rel='noreferrer noopener'>Adam</a>, so that students would have an easy way to export their Workday schedules to a calendar app of their choice.</p>
 					<CardButton name='View Website' href='https://akalay27.github.io/workday-schedule-exporter/' />
 					<CardButton name='View on GitHub' href='https://github.com/Akalay27/workday-schedule-exporter' />
 				</ProjectCard>

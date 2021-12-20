@@ -4,7 +4,7 @@ import Boid from './Boid';
 import p5 from 'p5';
 import './Boids.css';
 
-const BOID_COUNT = 150;
+const BOID_COUNT = 100;
 
 export default class Boids extends React.Component {
 	constructor(props) {
