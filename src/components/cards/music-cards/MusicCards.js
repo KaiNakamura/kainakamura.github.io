@@ -5,6 +5,7 @@ import gravity_cycles from 'audio/Gravity_Cycles.mp3';
 import there_will_come_soft_rains from 'audio/There_Will_Come_Soft_Rains.mp3';
 import deep_blue_255 from 'audio/Deep_Blue_255.mp3';
 import saccharine_squares from 'audio/Saccharine_Squares.mp3';
+import reverse_entropy from 'audio/Reverse_Entropy.mp3';
 import 'components/cards/Cards.css';
 
 export default class ProjectCards extends React.Component {
@@ -29,6 +30,10 @@ export default class ProjectCards extends React.Component {
 				<Card title='Saccharine Squares'>
 					<p>A fun 8-bit chiptune melody I wrote to be used for a 2D platformer.</p>
 					<CardAudio audio={saccharine_squares} />
+				</Card>
+				<Card title='Reverse Entropy'>
+					<p>My stab at creating an EDM beat with a 909 drum kit and some different synths I made.</p>
+					<CardAudio audio={reverse_entropy} />
 				</Card>
 			</div>
 		);
