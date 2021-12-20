@@ -3,7 +3,7 @@ import Card from 'components/cards/Card';
 import CardAudio from 'components/cards/CardAudio';
 import gravity_cycles from 'audio/Gravity_Cycles.mp3';
 import there_will_come_soft_rains from 'audio/There_Will_Come_Soft_Rains.mp3';
-import dark_blue_255 from 'audio/Dark_Blue_255.mp3';
+import deep_blue_255 from 'audio/Deep_Blue_255.mp3';
 import saccharine_squares from 'audio/Saccharine_Squares.mp3';
 import 'components/cards/Cards.css';
 
@@ -21,10 +21,10 @@ export default class ProjectCards extends React.Component {
 					<p>I used voice lines from an audiobook to tell the story and experimented with different instrumentation to fit the mood.</p>
 					<CardAudio audio={there_will_come_soft_rains} />
 				</Card>
-				<Card title='Dark Blue 255'>
+				<Card title='Deep Blue 255'>
 					<p>An ambient piece I made by using a very spacy pad with lots of reverb. I also added some frequency sweeps so the sound of the pad is always changing.</p>
 					<p>All the while a random number generator plays notes on a quiet bell.</p>
-					<CardAudio audio={dark_blue_255} />
+					<CardAudio audio={deep_blue_255} />
 				</Card>
 				<Card title='Saccharine Squares'>
 					<p>A fun 8-bit chiptune melody I wrote to be used for a 2D platformer.</p>
