@@ -30,6 +30,3 @@
 ### Contact
 - [ ] Make contact page look better
 - [ ] Add more contact methods?
-
-### Completed
-- [x] Make TODO
