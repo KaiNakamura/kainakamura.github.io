@@ -232,6 +232,7 @@ export default class CardAudio extends React.Component {
 				onMouseDown={this.mouseDown}
 				onMouseMove={this.mouseMove}
 				onMouseUp={this.mouseUp}
+				onMouseLeave={this.mouseUp}
 			>
 				{renderPlayButton()}
 
