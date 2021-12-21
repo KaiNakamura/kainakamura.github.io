@@ -8,14 +8,14 @@ export default class Card extends React.Component {
 				return <h1>{this.props.title}</h1>;
 			}
 			return null;
-		}
+		};
 
 		const renderSubtitle = () => {
 			if (this.props.title != null) {
 				return <h2>{this.props.subtitle}</h2>;
 			}
 			return null;
-		}
+		};
 
 		return (
 			<div className='Card'>

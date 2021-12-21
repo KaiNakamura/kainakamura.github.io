@@ -17,6 +17,7 @@
 - [x] Create audio player
 - [ ] Create waveform visualizer
 - [ ] Make custom audio player
+- [ ] Fix slider dragging
 
 ### Projects
 - [ ] Add racket projects from CS 1102

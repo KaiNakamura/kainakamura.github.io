@@ -16,7 +16,7 @@ export default class Boid {
 			sketch.random(sketch.height)
 		);
 		this.velocity = p5.Vector.random2D();
-		this.velocity.setMag(sketch.random(2, 4));
+		this.velocity.setMag(MAX_SPEED);
 		this.acceleration = sketch.createVector();
 		this.resize();
 	}

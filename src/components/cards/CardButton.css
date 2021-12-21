@@ -5,6 +5,7 @@
 	margin-right: 1em;
 	font-size: 1rem;
 	margin-top: 1em;
+	user-select: none;
 }
 
 .CardButton a {
@@ -15,7 +16,7 @@
 	height: 100%;
 	vertical-align: middle;
 	padding: 0 2em;
-	color: white;
+	color: var(--white);
 	font-size: 0.875em;
 	font-weight: bold;
 	letter-spacing: 0.1375em;

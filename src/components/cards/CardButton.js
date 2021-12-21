@@ -4,22 +4,26 @@ import './CardButton.css';
 
 export default class CardButton extends React.Component {
 	render() {
+		const renderLink = () => {
+			// If link exists and is on this site, route to page
+			if (this.props.href != null && this.props.href.charAt(0) === '/') {
+				return (
+					<Link to={this.props.href}>
+						<span>{this.props.name}</span>
+					</Link>
+				);
+			}
+			// Else link is external, open in new tab
+			return (
+				<a href={this.props.href} target='_blank' rel='noreferrer noopener'>
+					<span>{this.props.name}</span>
+				</a>
+			);
+		};
+
 		return (
-			<div className='CardButton'>
-				{
-					// If link is on this site, route to page
-					// If link is external, open in new tab
-					this.props.href !== undefined && 
-					this.props.href.charAt(0) === '/'
-						?
-							<Link to={this.props.href}>
-								<span>{this.props.name}</span>
-							</Link>
-						:
-							<a href={this.props.href} target='_blank' rel='noreferrer noopener'>
-								<span>{this.props.name}</span>
-							</a>
-				}
+			<div className='CardButton' onClick={this.props.onClick}>
+				{renderLink()}
 			</div>
 		);
 	}
