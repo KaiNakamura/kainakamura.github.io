@@ -8,8 +8,9 @@
 } */
 
 .CardAudio {
-	width: 400px;
-	min-width: 300px;
+	/* width: 400px; */
+	/* min-width: 300px; */
+	max-width: 400px;
 	height: 3em;
 	vertical-align: top;
 	margin-right: 1em;
