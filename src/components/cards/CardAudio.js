@@ -114,7 +114,7 @@ export default class CardAudio extends React.Component {
 		if(event.type === "click" && this.isDraggable(event.target)) {
 			rangeBox = event.target.parentElement.parentElement;
 		}
-		if(event.type === "mousemove") {
+		if(event.type === "mousemove" || event.type === "touchmove") {
 			rangeBox = element.parentElement.parentElement;
 		}
 		return rangeBox;
@@ -149,16 +149,30 @@ export default class CardAudio extends React.Component {
 		let slider = this.getRangeBox(event);
 		let rect = slider.getBoundingClientRect();
 		let K = 0;
+		let x, y;
+		if (event.type === "touchmove") {
+			x = event.touches[0].clientX;
+			y = event.touches[0].clientY;
+		}
+		else {
+			x = event.clientX;
+			y = event.clientY;
+		}
+
 		if(slider.dataset.direction === "horizontal") {
-			let offsetX = event.clientX - slider.offsetLeft;
+			let offsetX = x - slider.offsetLeft;
 			let width = slider.clientWidth;
 			K = offsetX / width;    
 		}
 		else if(slider.dataset.direction === "vertical") {
 			let height = slider.clientHeight;
-			var offsetY = event.clientY - rect.top;
+			var offsetY = y - rect.top;
 			K = 1 - offsetY / height;
 		}
+
+		// Clamp K to [0, 1]
+		K = Math.max(0, Math.min(1, K));
+
 		return K;
 	}
 
@@ -249,6 +263,9 @@ export default class CardAudio extends React.Component {
 				onMouseMove={this.mouseMove}
 				onMouseUp={this.mouseUp}
 				onMouseLeave={this.mouseUp}
+				onTouchStart={this.mouseDown}
+				onTouchMove={this.mouseMove}
+				onTouchCancel={this.mouseUp}
 			>
 				{renderPlayButton()}
 

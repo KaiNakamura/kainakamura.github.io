@@ -11,6 +11,36 @@ export default class Mouse {
 		this.sketch.mouseY = -this.radius;
 	}
 
+	getPosition() {
+		const isMobile = () => {
+			const toMatch = [
+				/Android/i,
+				/webOS/i,
+				/iPhone/i,
+				/iPad/i,
+				/iPod/i,
+				/BlackBerry/i,
+				/Windows Phone/i
+			];
+			
+			return toMatch.some((toMatchItem) => {
+				return navigator.userAgent.match(toMatchItem);
+			});
+		};
+
+		if (isMobile() && !this.sketch.mouseIsPressed) {
+			return this.sketch.createVector(
+				-this.radius,
+				-this.radius
+			);
+		}
+
+		return this.sketch.createVector(
+			this.sketch.mouseX,
+			this.sketch.mouseY
+		);
+	}
+
 	draw() {
 		if (this.sketch.mouseIsPressed && this.animationFrame < ANIMATION_FRAMES) {
 			this.animationFrame++;
@@ -19,20 +49,22 @@ export default class Mouse {
 			this.animationFrame--;
 		}
 
+		let position = this.getPosition();
+
 		this.sketch.stroke(100);
 		this.sketch.strokeWeight(2);
 		this.sketch.noFill();
 		this.sketch.ellipse(
-			this.sketch.mouseX,
-			this.sketch.mouseY,
+			position.x,
+			position.y,
 			this.radius * 2 - this.easeInOutQuad(this.animationFrame)
 		);
 
 		this.sketch.noStroke();
 		this.sketch.fill(100);
 		this.sketch.ellipse(
-			this.sketch.mouseX,
-			this.sketch.mouseY,
+			position.x,
+			position.y,
 			this.radius / 4.0 + 2 * this.easeInOutQuad(this.animationFrame)
 		);
 	}

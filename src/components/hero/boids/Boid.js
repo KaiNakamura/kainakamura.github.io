@@ -46,10 +46,7 @@ export default class Boid {
 		let cohesion = this.sketch.createVector();
 		let separation = this.sketch.createVector();
 		let total = 0;
-		let mousePosition = this.sketch.createVector(
-			this.sketch.mouseX,
-			this.sketch.mouseY
-		);
+		let mousePosition = mouse.getPosition();
 		let mouseDistance = this.position.dist(mousePosition);
 		if (mouseDistance < mouse.radius && mouseDistance > 0) {
 			if (this.sketch.mouseIsPressed) {
