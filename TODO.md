@@ -1,6 +1,7 @@
 # TODO
 
 ### Boids
+- [x] Fix dragging on mobile
 - [ ] Optimize boids with quad tree
 - [ ] Fix jittery rotation
 - [ ] Make boids same size and speed on all screen sizes
@@ -16,9 +17,9 @@
 - [x] Add music page
 - [x] Create audio player
 - [x] Fix slider dragging
-- [ ] Fix audio player on mobile
+- [x] Fix audio player on mobile
+- [x] Make custom audio player
 - [ ] Create waveform visualizer
-- [ ] Make custom audio player
 
 ### Projects
 - [ ] Add racket projects from CS 1102
