@@ -19,6 +19,7 @@
 - [x] Fix slider dragging
 - [x] Fix audio player on mobile
 - [x] Make custom audio player
+- [ ] Pause other players when another one starts
 - [ ] Create waveform visualizer
 
 ### Projects
