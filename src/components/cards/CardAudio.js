@@ -186,7 +186,13 @@ export default class CardAudio extends React.Component {
 
 		const renderPlayButton = () => {
 			if (this.state.canPlay) {
-				return <div className={this.state.playing ? "pause-btn" : "play-btn"} onClick={this.togglePlay}></div>;
+				return (
+					<div
+						className={this.state.playing ? "pause-btn" : "play-btn"}
+						onClick={this.togglePlay}
+					>
+					</div>
+				);
 			}
 			return (
 				<div className="loading">
@@ -215,9 +221,19 @@ export default class CardAudio extends React.Component {
 			if (this.state.volumeControlsOpen) {
 				return (
 					<div className="volume-controls">
-						<div className="slider" ref={this.volumeSliderRef} data-direction="vertical" onClick={(event) => this.changeVolume(event)}>
+						<div
+							className="slider"
+							ref={this.volumeSliderRef}
+							data-direction="vertical"
+							onClick={(event) => this.changeVolume(event)}
+						>
 							<div className="slider-bar" style={{height: getVolume()}}>
-								<div className="pin" id="volume-pin" data-method="changeVolume"></div>
+								<div
+									className="pin"
+									id="volume-pin"
+									data-method="changeVolume"
+								>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -238,7 +254,12 @@ export default class CardAudio extends React.Component {
 
 				<div className="controls">
 					<span className="current-time">{formatTime(this.state.currentTime)}</span>
-					<div className="slider" ref={this.progressSliderRef} data-direction="horizontal" onClick={(event) => this.changeProgress(event)}>
+					<div
+						className="slider"
+						ref={this.progressSliderRef}
+						data-direction="horizontal"
+						onClick={(event) => this.changeProgress(event)}
+					>
 						<div className="slider-bar" style={{width: getProgress()}}>
 							<div className="pin" id="progress-pin" data-method="changeProgress"></div>
 						</div>
@@ -255,6 +276,7 @@ export default class CardAudio extends React.Component {
 					crossOrigin="anonymous"
 					ref={this.audioPlayerRef}
 					onCanPlay={this.canPlay}
+					onLoadedMetadata={this.canPlay}
 					onTimeUpdate={this.updateTime}
 					onEnded={this.ended}
 				>

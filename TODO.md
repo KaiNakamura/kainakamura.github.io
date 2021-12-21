@@ -15,9 +15,10 @@
 ### Music
 - [x] Add music page
 - [x] Create audio player
+- [x] Fix slider dragging
+- [ ] Fix audio player on mobile
 - [ ] Create waveform visualizer
 - [ ] Make custom audio player
-- [ ] Fix slider dragging
 
 ### Projects
 - [ ] Add racket projects from CS 1102
