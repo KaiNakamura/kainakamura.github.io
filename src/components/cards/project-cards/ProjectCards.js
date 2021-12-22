@@ -56,6 +56,7 @@ export default class ProjectCards extends React.Component {
 				>
 					<p>This project is a Minecraft speedrunning and PvP plugin. Teams of players race to be the first to beat the game.</p>
 					<p>It was used in the <CardLink href='https://smash.gg/mcss'>Minecraft Speedrun Showdown</CardLink> tournament in which 32 streamers competed for a $1000 prize.</p>
+					<CardButton href='https://smash.gg/mcss'>More Details</CardButton>
 					<CardButton href='https://github.com/KaiNakamura/SpeedrunShowdown'>View on GitHub</CardButton>
 				</ProjectCard>
 				<ProjectCard
