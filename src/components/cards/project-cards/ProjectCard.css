@@ -1,13 +1,15 @@
 .javascript {
 	color: var(--yellow);
-}
-
-.reactjs {
-	color: var(--blue);
+	padding-left: 5px;
 }
 
 .java {
 	color: var(--orange);
+	padding-left: 5px;
+}
+
+.reactjs {
+	color: var(--blue);
 }
 
 .gdscript {
