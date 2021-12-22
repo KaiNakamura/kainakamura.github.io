@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import CardButton from 'components/cards/CardButton';
 import chess from 'images/chess.png';
+import graphing_calculator from 'images/graphing-calculator.png';
 import speedrun_showdown from 'images/speedrun-showdown.png';
 import workday_schedule_exporter from 'images/workday-schedule-exporter.png';
 import 'components/cards/Cards.css';
@@ -20,7 +21,21 @@ export default class ProjectCards extends React.Component {
 					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/ChessEngine' />
 				</ProjectCard>
 				<ProjectCard
-					title='kainakamura.github.io'
+					title='Graphing Calculator'
+					language='java'
+					img={<img src={graphing_calculator} alt='Graphing Calculator' />}
+				>
+					<p>I built a <a href='https://en.wikipedia.org/wiki/Recursive_descent_parser' target='_blank' rel='noreferrer noopener'>recursive descent parser</a> graphing calculator using <a href='https://en.wikipedia.org/wiki/Context-free_grammar' target='_blank' rel='noreferrer noopener'>context-free grammar (CFG)</a>.</p>
+					<p>Strings are converted into an expression tree that represents the steps used to evaluate the expression with respect to order of operations.</p>
+					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/GraphingCalculator' />
+				</ProjectCard>
+				<ProjectCard
+					title={
+						<>
+							<span>kainakamura.</span>
+							<span>github.io</span>
+						</>
+					}
 					language='reactjs'
 				>
 					<p>You're looking at it right now! This is where I show off all the cool stuff I've been working on recently.</p>
