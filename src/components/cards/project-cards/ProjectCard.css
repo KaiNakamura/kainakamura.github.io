@@ -9,3 +9,7 @@
 .java {
 	color: var(--orange);
 }
+
+.gdscript {
+	color: var(--blue);
+}

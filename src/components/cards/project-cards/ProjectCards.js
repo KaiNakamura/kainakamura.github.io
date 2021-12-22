@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import CardButton from 'components/cards/CardButton';
 import chess from 'images/chess.png';
+import gun_gator from 'images/gun-gator.png';
 import graphing_calculator from 'images/graphing-calculator.png';
 import speedrun_showdown from 'images/speedrun-showdown.png';
 import workday_schedule_exporter from 'images/workday-schedule-exporter.png';
@@ -14,11 +15,21 @@ export default class ProjectCards extends React.Component {
 				<ProjectCard
 					title='Chess Engine'
 					language='javascript'
-					img={<img src={chess} alt='Kai Nakamura' />}
+					img={<img src={chess} alt='Chess' />}
 				>
 					<p>This project is a work in progress. I plan to make an AI that can play chess using a <a href='https://en.wikipedia.org/wiki/Minimax' target='_blank' rel='noreferrer noopener'>minimax</a> algorithm.</p>
 					<p>Right now I have code for basic piece movement and capturing. Check out the current status of the project on GitHub.</p>
 					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/ChessEngine' />
+				</ProjectCard>
+				<ProjectCard
+					title='Gun Gator'
+					language='gdscript'
+					img={<img src={gun_gator} alt='Gun Gator' />}
+				>
+					<p>I made this 2D pixel platformer while I was learning how to use the <a href='https://godotengine.org/' target='_blank' rel='noreferrer noopener'>Godot game engine</a>.</p>
+					<p>The game is heavily inspired by Vlambeer's outstanding <a href='http://supercratebox.com/' target='_blank' rel='noreferrer noopener'>Super Crate Box</a>, but with my own art, music, and code.</p>
+					<CardButton name='Play on Itch.io' href='https://kainakamura.itch.io/gun-gator' />
+					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/GunGator' />
 				</ProjectCard>
 				<ProjectCard
 					title='Graphing Calculator'
@@ -30,12 +41,7 @@ export default class ProjectCards extends React.Component {
 					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/GraphingCalculator' />
 				</ProjectCard>
 				<ProjectCard
-					title={
-						<>
-							<span>kainakamura.</span>
-							<span>github.io</span>
-						</>
-					}
+					title='kainakamura.github.io'
 					language='reactjs'
 				>
 					<p>You're looking at it right now! This is where I show off all the cool stuff I've been working on recently.</p>
