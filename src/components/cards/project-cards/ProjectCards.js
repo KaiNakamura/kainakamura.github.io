@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import CardLink from 'components/cards/CardLink';
 import CardButton from 'components/cards/CardButton';
 import chess from 'images/chess.png';
 import gun_gator from 'images/gun-gator.png';
@@ -15,56 +16,56 @@ export default class ProjectCards extends React.Component {
 				<ProjectCard
 					title='Chess Engine'
 					language='javascript'
-					img={<img src={chess} alt='Chess' />}
+					img={chess}
 				>
-					<p>This project is a work in progress. I plan to make an AI that can play chess using a <a href='https://en.wikipedia.org/wiki/Minimax' target='_blank' rel='noreferrer noopener'>minimax</a> algorithm.</p>
+					<p>This project is a work in progress. I plan to make an AI that can play chess using a <CardLink href='https://en.wikipedia.org/wiki/Minimax'>minimax</CardLink> algorithm.</p>
 					<p>Right now I have code for basic piece movement and capturing. Check out the current status of the project on GitHub.</p>
-					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/ChessEngine' />
+					<CardButton href='https://github.com/KaiNakamura/ChessEngine'>View on GitHub</CardButton>
 				</ProjectCard>
 				<ProjectCard
 					title='Gun Gator'
 					language='gdscript'
-					img={<img src={gun_gator} alt='Gun Gator' />}
+					img={gun_gator}
 				>
-					<p>I made this 2D pixel platformer while I was learning how to use the <a href='https://godotengine.org/' target='_blank' rel='noreferrer noopener'>Godot game engine</a>.</p>
-					<p>The game is heavily inspired by Vlambeer's outstanding <a href='http://supercratebox.com/' target='_blank' rel='noreferrer noopener'>Super Crate Box</a>, but with my own art, music, and code.</p>
-					<CardButton name='Play on Itch.io' href='https://kainakamura.itch.io/gun-gator' />
-					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/GunGator' />
+					<p>I made this 2D pixel platformer while I was learning how to use the <CardLink href='https://godotengine.org/'>Godot game engine</CardLink>.</p>
+					<p>The game is heavily inspired by Vlambeer's outstanding <CardLink href='http://supercratebox.com/'>Super Crate Box</CardLink>, but with my own art, music, and code.</p>
+					<CardButton href='https://kainakamura.itch.io/gun-gator'>Play on Itch.io</CardButton>
+					<CardButton href='https://github.com/KaiNakamura/GunGator'>View on Github</CardButton>
 				</ProjectCard>
 				<ProjectCard
 					title='Graphing Calculator'
 					language='java'
-					img={<img src={graphing_calculator} alt='Graphing Calculator' />}
+					img={graphing_calculator}
 				>
-					<p>I built a <a href='https://en.wikipedia.org/wiki/Recursive_descent_parser' target='_blank' rel='noreferrer noopener'>recursive descent parser</a> graphing calculator using <a href='https://en.wikipedia.org/wiki/Context-free_grammar' target='_blank' rel='noreferrer noopener'>context-free grammar (CFG)</a>.</p>
+					<p>I built a <CardLink href='https://en.wikipedia.org/wiki/Recursive_descent_parser'>recursive descent parser</CardLink> graphing calculator using <CardLink href='https://en.wikipedia.org/wiki/Context-free_grammar'>context-free grammar (CFG)</CardLink>.</p>
 					<p>Strings are converted into an expression tree that represents the steps used to evaluate the expression with respect to order of operations.</p>
-					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/GraphingCalculator' />
+					<CardButton href='https://github.com/KaiNakamura/GraphingCalculator'>View on GitHub</CardButton>
 				</ProjectCard>
 				<ProjectCard
 					title='kainakamura.github.io'
 					language='reactjs'
 				>
 					<p>You're looking at it right now! This is where I show off all the cool stuff I've been working on recently.</p>
-					<p>This website went through a lot of different changes but currently it's running on <a href='https://reactjs.org' target='_blank' rel='noreferrer noopener'>ReactJs</a>. Check out the GitHub repo to view the full history of my website.</p>
-					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/kainakamura.github.io' />
+					<p>This website went through a lot of different changes but currently it's running on <CardLink href='https://reactjs.org'>ReactJs</CardLink>. Check out the GitHub repo to view the full history of my website.</p>
+					<CardButton href='https://github.com/KaiNakamura/kainakamura.github.io'>View on GitHub</CardButton>
 				</ProjectCard>
 				<ProjectCard
 					title='Speedrun Showdown'
 					language='java'
-					img={<img src={speedrun_showdown} alt='Speedrun Showdown' />}
+					img={speedrun_showdown}
 				>
 					<p>This project is a Minecraft speedrunning and PvP plugin. Teams of players race to be the first to beat the game.</p>
-					<p>It was used in the <a href='https://smash.gg/mcss' target='_blank' rel='noreferrer noopener'>Minecraft Speedrun Showdown</a> tournament in which 32 streamers competed for a $1000 prize.</p>
-					<CardButton name='View on GitHub' href='https://github.com/KaiNakamura/SpeedrunShowdown' />
+					<p>It was used in the <CardLink href='https://smash.gg/mcss'>Minecraft Speedrun Showdown</CardLink> tournament in which 32 streamers competed for a $1000 prize.</p>
+					<CardButton href='https://github.com/KaiNakamura/SpeedrunShowdown'>View on GitHub</CardButton>
 				</ProjectCard>
 				<ProjectCard
 					title='Workday Schedule Exporter'
 					language='reactjs'
-					img={<img src={workday_schedule_exporter} alt='Workday Schedule Exporter' />}
+					img={workday_schedule_exporter}
 				>
-					<p>This was the first project I ever made while at WPI. I made it with my roommate, <a href='https://github.com/Akalay27' target='_blank' rel='noreferrer noopener'>Adam</a>, so that students would have an easy way to export their Workday schedules to a calendar app of their choice.</p>
-					<CardButton name='View Website' href='https://akalay27.github.io/workday-schedule-exporter/' />
-					<CardButton name='View on GitHub' href='https://github.com/Akalay27/workday-schedule-exporter' />
+					<p>This was the first project I ever made while at WPI. I made it with my roommate, <CardLink href='https://github.com/Akalay27'>Adam</CardLink>, so that students would have an easy way to export their Workday schedules to a calendar app of their choice.</p>
+					<CardButton href='https://akalay27.github.io/workday-schedule-exporter/'>View Website</CardButton>
+					<CardButton href='https://github.com/Akalay27/workday-schedule-exporter'>View on GitHub</CardButton>
 				</ProjectCard>
 			</div>
 		);

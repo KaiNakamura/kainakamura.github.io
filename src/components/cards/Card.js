@@ -17,6 +17,13 @@ export default class Card extends React.Component {
 			return null;
 		};
 
+		const renderImg = () => {
+			if (this.props.img != null && typeof this.props.img === 'string') {
+				return <img src={this.props.img} alt={this.props.title} />
+			}
+			return this.props.img;
+		};
+
 		return (
 			<div className='Card'>
 				<div className='CardHeading'>
@@ -24,7 +31,7 @@ export default class Card extends React.Component {
 					{renderSubtitle()}
 					{this.props.heading}
 				</div>
-				{this.props.img}
+				{renderImg()}
 				<div className='CardDescription'>
 					{this.props.children}
 				</div>
