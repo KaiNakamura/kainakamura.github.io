@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import Cards from 'components/cards/Cards';
 import CardLink from 'components/cards/CardLink';
 import CardButton from 'components/cards/CardButton';
 import chess from 'images/chess.png';
@@ -12,7 +13,7 @@ import 'components/cards/Cards.css';
 export default class ProjectCards extends React.Component {
 	render() {
 		return (
-			<div className='Cards'>
+			<Cards slideshow={this.props.slideshow}>
 				<ProjectCard
 					title='Chess Engine'
 					language='javascript'
@@ -68,7 +69,7 @@ export default class ProjectCards extends React.Component {
 					<CardButton href='https://akalay27.github.io/workday-schedule-exporter/'>View Website</CardButton>
 					<CardButton href='https://github.com/Akalay27/workday-schedule-exporter'>View on GitHub</CardButton>
 				</ProjectCard>
-			</div>
+			</Cards>
 		);
 	}
 }

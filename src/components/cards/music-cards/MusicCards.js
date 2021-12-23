@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'components/cards/Card';
+import Cards from 'components/cards/Cards';
 import CardLink from 'components/cards/CardLink';
 import CardAudio from 'components/cards/CardAudio';
 import gravity_cycles from 'audio/Gravity_Cycles.mp3';
@@ -12,7 +13,7 @@ import 'components/cards/Cards.css';
 export default class ProjectCards extends React.Component {
 	render() {
 		return (
-			<div className='Cards'>
+			<Cards slideshow={this.props.slideshow}>
 				<Card title='Gravity Cycles'>
 					<p>I made this piece for my final project in my Electronic Music Composition class taught by professor <CardLink href='https://www.vjmanzo.com/'>V.J. Manzo</CardLink>.</p>
 					<p>I wanted to make something that would showcase what I've learned over the duration of this course. So I took several unfinished projects I made before taking this class and remixed them all together in the style of a chiptune song.</p>
@@ -36,7 +37,7 @@ export default class ProjectCards extends React.Component {
 					<p>My stab at creating an EDM beat with some different synths I made.</p>
 					<CardAudio audio={reverse_entropy} />
 				</Card>
-			</div>
+			</Cards>
 		);
 	}
 }

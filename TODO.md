@@ -8,7 +8,7 @@
 
 ### Cards
 - [x] Add a cards wrapper
-- [ ] Make a way to mark cards as featured and only show those on homepage
+- [x] Make card slideshow
 - [ ] Add a "view all" button to featured cards to show the rest
 - [ ] Add markdown functionality for cards
 - [ ] Find a better way to import images and audio
