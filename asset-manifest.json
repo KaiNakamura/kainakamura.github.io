@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.5cf632b0.chunk.css",
-    "main.js": "/static/js/main.5a381e6e.chunk.js",
-    "main.js.map": "/static/js/main.5a381e6e.chunk.js.map",
+    "main.css": "/static/css/main.466593fe.chunk.css",
+    "main.js": "/static/js/main.59cfef2e.chunk.js",
+    "main.js.map": "/static/js/main.59cfef2e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7eb684bf.js",
     "runtime-main.js.map": "/static/js/runtime-main.7eb684bf.js.map",
     "static/js/2.df0a85f8.chunk.js": "/static/js/2.df0a85f8.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.031c6368.chunk.js": "/static/js/3.031c6368.chunk.js",
     "static/js/3.031c6368.chunk.js.map": "/static/js/3.031c6368.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5cf632b0.chunk.css.map": "/static/css/main.5cf632b0.chunk.css.map",
+    "static/css/main.466593fe.chunk.css.map": "/static/css/main.466593fe.chunk.css.map",
     "static/js/2.df0a85f8.chunk.js.LICENSE.txt": "/static/js/2.df0a85f8.chunk.js.LICENSE.txt",
     "static/media/Deep_Blue_255.0321d97f.mp3": "/static/media/Deep_Blue_255.0321d97f.mp3",
     "static/media/Gravity_Cycles.353b12fe.mp3": "/static/media/Gravity_Cycles.353b12fe.mp3",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.7eb684bf.js",
     "static/js/2.df0a85f8.chunk.js",
-    "static/css/main.5cf632b0.chunk.css",
-    "static/js/main.5a381e6e.chunk.js"
+    "static/css/main.466593fe.chunk.css",
+    "static/js/main.59cfef2e.chunk.js"
   ]
 }
