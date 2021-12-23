@@ -9,6 +9,7 @@
 ### Cards
 - [x] Add a cards wrapper
 - [x] Make card slideshow
+- [ ] Stop buttons from moving as slides change
 - [ ] Add a "view all" button to featured cards to show the rest
 - [ ] Add markdown functionality for cards
 - [ ] Find a better way to import images and audio
