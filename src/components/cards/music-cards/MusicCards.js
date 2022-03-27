@@ -5,6 +5,7 @@ import CardLink from 'components/cards/CardLink';
 import CardAudio from 'components/cards/CardAudio';
 import gravity_cycles from 'audio/Gravity_Cycles.mp3';
 import timbercreek from 'audio/Timbercreek.mp3';
+import sounds_of_room_418 from 'audio/Sounds_of_Room_418.mp3';
 import reverse_entropy from 'audio/Reverse_Entropy.mp3';
 import deep_blue_255 from 'audio/Deep_Blue_255.mp3';
 import there_will_come_soft_rains from 'audio/There_Will_Come_Soft_Rains.mp3';
@@ -21,6 +22,18 @@ export default class ProjectCards extends React.Component {
 				<Card title='Timbercreek'>
 					<p>My final composition for Topics in MIDI taught by Professor <CardLink href='https://www.davidibbett.com/'>David Ibbett</CardLink>.</p>
 					<CardAudio audio={timbercreek} />
+				</Card>
+				<Card title='Sounds of Room 418'>
+					<p>A song made entirely out of sounds from my dorm room:</p>
+					<ul>
+						<li>Lead 1 - Glass bottles</li>
+						<li>Lead 2 - Microwave beep</li>
+						<li>Kick - Kicking a bucket</li>
+						<li>Snare - Dropping a chip bag</li>
+						<li>Hi-hat - Spray bottle</li>
+						<li>Various Percussion - Opening and closing microwave, slamming a fridge, shaking a water bottle, dropping a pen, and shuffling cards</li>
+					</ul>
+					<CardAudio audio={sounds_of_room_418} />
 				</Card>
 				<Card title='Reverse Entropy'>
 					<p>I made this 8-bit chiptune piece for my final project in my Electronic Music Composition class taught by Professor <CardLink href='https://www.vjmanzo.com/'>V.J. Manzo</CardLink>.</p>
